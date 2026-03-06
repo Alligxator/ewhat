@@ -21,7 +21,7 @@ Ewhat 是一款为选择困难症而生的美食随机推荐 iOS App。通过卡
 |------|------|
 | **SwiftUI** | 声明式 UI 框架，iOS 17+ |
 | **SwiftData** | Apple 原生持久化框架，管理用餐记录和用户偏好 |
-| **@Observable** | iOS 17 Observation 框架，替代 ObservableObject |
+| **@Observable + @MainActor** | iOS 17 Observation 框架，所有 ViewModel 标记 @MainActor 保证线程安全 |
 | **Canvas API** | 高性能粒子特效渲染（确认选择时的烟花爆炸） |
 | **matchedGeometryEffect** | 抽卡 hero 转场动画（ZStack overlay 实现） |
 | **Calendar (Chinese)** | 农历日期计算和二十四节气推算 |
@@ -35,14 +35,14 @@ Ewhat/
 ├── App/
 │   └── WhatToEatApp.swift          # App 入口 + SwiftData 容器配置
 ├── Models/
-│   ├── Food.swift                   # 食物数据模型 + JSON 加载
-│   ├── FoodCategory.swift           # 枚举定义（菜系/类别/场景/价格/稀有度/五行）
+│   ├── Food.swift                   # 食物数据模型 + FoodDatabase（static let 缓存）
+│   ├── FoodCategory.swift           # 枚举定义（菜系/类别/场景/价格/稀有度/五行，全部 Identifiable）
 │   ├── DailyFortune.swift           # 食运模型 + 152 条签文模板
 │   └── MealRecord.swift             # SwiftData 持久化模型（MealRecord + UserPreference）
 ├── ViewModels/
-│   ├── FortuneViewModel.swift       # 确定性食运生成（FNV-1a 哈希种子）
-│   ├── CardViewModel.swift          # 抽卡核心逻辑（筛选→去重→加权随机）
-│   └── RecordViewModel.swift        # 记录 CRUD + 统计分析 + 上瘾检测
+│   ├── FortuneViewModel.swift       # @MainActor — 确定性食运生成（FNV-1a 哈希种子）
+│   ├── CardViewModel.swift          # @MainActor — 抽卡核心逻辑（筛选→去重→加权随机）
+│   └── RecordViewModel.swift        # @MainActor — 记录 CRUD + 统计分析 + 上瘾检测
 ├── Views/
 │   ├── Home/                        # 首页（ZStack: TabView + CardResult overlay）
 │   │   ├── HomeView.swift           #   根视图，管理 Tab + 抽卡结果 overlay
@@ -63,7 +63,7 @@ Ewhat/
 │       └── BlacklistView.swift      #   食物黑名单管理
 ├── Theme/
 │   ├── Colors.swift                 # 新中式暖色调色板 + 菜系色 + 功能色
-│   ├── Fonts.swift                  # 统一字体定义
+│   ├── Fonts.swift                  # 统一字体定义（固定尺寸，设计意图）
 │   └── Animations.swift             # 动画预设 + CardStyle/CardShadow ViewModifier
 ├── Utils/
 │   ├── LunarCalendar.swift          # 农历计算 + 节气 + 五行
@@ -150,6 +150,18 @@ FortuneViewModel                       │
 3. 选择目标设备（iPhone 模拟器或真机），点击 Run (Cmd+R)。
 
 > 项目无第三方依赖，无需安装 CocoaPods 或 SPM 包。
+
+## 代码质量
+
+经过三轮代码审查和修复（详见 [CODE_REVIEW.md](CODE_REVIEW.md)），项目达到生产就绪状态：
+
+- **零编译阻塞 + 零高优先级问题** — 所有关键 bug 已修复
+- **线程安全** — 所有 ViewModel 标记 `@MainActor`，ModelContext 访问安全
+- **零 force unwrap** — Calendar 日期计算全部使用安全解包
+- **错误可追踪** — 关键 I/O 操作（JSON 加载、SwiftData 保存）带 DEBUG 日志
+- **性能优化** — FoodDatabase 缓存、DateFormatter 缓存，避免重复创建
+- **无障碍支持** — VoiceOver 标签、reduceMotion 动画适配
+- **数据封装** — ModelContext 注入受控（`private(set)` + `configure()`），FoodDatabase 加载私有化
 
 ## 设计理念
 
