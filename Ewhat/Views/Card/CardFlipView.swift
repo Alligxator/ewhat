@@ -69,6 +69,7 @@ struct CardFlipView: View {
 // MARK: - 卡牌背面 — 呼吸光效 + 装饰纹样 + 光泽扫过
 
 struct CardBackView: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var breatheScale: CGFloat = 1.0
     @State private var breatheGlow: CGFloat = 8
     @State private var shimmerOffset: CGFloat = -300
@@ -148,6 +149,7 @@ struct CardBackView: View {
         .scaleEffect(breatheScale)
         .cardShadow(radius: 12)
         .onAppear {
+            guard !reduceMotion else { return }
             withAnimation(AppAnimations.breathe) {
                 breatheScale = 1.02
                 breatheGlow = 14

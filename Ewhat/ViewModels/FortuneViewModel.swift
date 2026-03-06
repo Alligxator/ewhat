@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// 食运计算 ViewModel — 确定性伪随机：同一天 + 同一配置 = 同一食运
+@MainActor
 @Observable
 final class FortuneViewModel {
 
@@ -116,17 +117,6 @@ final class FortuneViewModel {
         case .earth: return .water
         case .water: return .fire
         case .fire:  return .metal
-        }
-    }
-
-    /// 五行相生：金生水 → 水生木 → 木生火 → 火生土 → 土生金
-    private func supportingElement(for element: FiveElement) -> FiveElement {
-        switch element {
-        case .metal: return .water
-        case .water: return .wood
-        case .wood:  return .fire
-        case .fire:  return .earth
-        case .earth: return .metal
         }
     }
 

@@ -29,6 +29,8 @@ struct DrawCardButton: View {
             .animation(AppAnimations.bouncy, value: isPressed)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("抽一张卡牌")
+        .accessibilityHint("随机推荐一道美食")
         .simultaneousGesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { _ in isPressed = true }

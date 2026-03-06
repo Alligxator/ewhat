@@ -57,13 +57,24 @@ struct Food: Codable, Identifiable, Hashable {
 // MARK: - 食物数据库加载
 
 enum FoodDatabase {
-    static func loadAll() -> [Food] {
-        guard let url = Bundle.main.url(forResource: "foods", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
+    static let allFoods: [Food] = loadAll()
+
+    private static func loadAll() -> [Food] {
+        guard let url = Bundle.main.url(forResource: "foods", withExtension: "json") else {
+            #if DEBUG
+            print("[FoodDatabase] foods.json not found in bundle")
+            #endif
             return []
         }
 
-        let decoder = JSONDecoder()
-        return (try? decoder.decode([Food].self, from: data)) ?? []
+        do {
+            let data = try Data(contentsOf: url)
+            return try JSONDecoder().decode([Food].self, from: data)
+        } catch {
+            #if DEBUG
+            print("[FoodDatabase] Failed to load foods: \(error)")
+            #endif
+            return []
+        }
     }
 }

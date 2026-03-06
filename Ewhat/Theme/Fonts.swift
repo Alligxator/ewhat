@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Font definitions use fixed sizes for design consistency. Dynamic Type is not currently supported.
 enum AppFonts {
 
     // ── 标题 — 圆体加粗 ──

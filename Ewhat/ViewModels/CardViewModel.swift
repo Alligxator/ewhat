@@ -1,7 +1,7 @@
 import SwiftUI
-import SwiftData
 
 /// 抽卡逻辑 ViewModel
+@MainActor
 @Observable
 final class CardViewModel {
 
@@ -46,7 +46,7 @@ final class CardViewModel {
     // MARK: - Init
 
     init() {
-        allFoods = FoodDatabase.loadAll()
+        allFoods = FoodDatabase.allFoods
     }
 
     // MARK: - 数据注入

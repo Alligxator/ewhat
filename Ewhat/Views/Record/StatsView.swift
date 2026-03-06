@@ -13,10 +13,10 @@ struct StatsView: View {
         let now = Date.now
         switch timeScope {
         case .week:
-            let start = cal.date(from: cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: now))!
+            let start = cal.date(from: cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: now)) ?? now
             return records.filter { $0.date >= start }
         case .month:
-            let start = cal.date(from: cal.dateComponents([.year, .month], from: now))!
+            let start = cal.date(from: cal.dateComponents([.year, .month], from: now)) ?? now
             return records.filter { $0.date >= start }
         case .all:
             return records

@@ -132,7 +132,6 @@ enum LunarCalendar {
     }
 
     private static func dayName(_ day: Int) -> String {
-        let tens = ["初", "十", "廿", "三十"]
         let digits = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
 
         switch day {

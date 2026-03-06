@@ -130,17 +130,13 @@ struct SettingsView: View {
                 HStack {
                     Label("食物数据库", systemImage: "cylinder.split.1x2")
                     Spacer()
-                    Text("\(FoodDatabase.loadAll().count) 条")
+                    Text("\(FoodDatabase.allFoods.count) 条")
                         .foregroundStyle(.secondary)
                 }
             }
         }
         .navigationTitle("设置")
         .onAppear { ensurePreference() }
-        .preferredColorScheme(
-            colorSchemePreference == 1 ? .light :
-            colorSchemePreference == 2 ? .dark : nil
-        )
     }
 
     // MARK: - 偏好菜系选择

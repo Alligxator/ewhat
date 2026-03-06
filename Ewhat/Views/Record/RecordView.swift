@@ -48,7 +48,9 @@ struct RecordView: View {
             // 月份导航
             HStack {
                 Button {
-                    withAnimation { selectedDate = Calendar.current.date(byAdding: .month, value: -1, to: selectedDate)! }
+                    if let prev = Calendar.current.date(byAdding: .month, value: -1, to: selectedDate) {
+                        withAnimation { selectedDate = prev }
+                    }
                 } label: {
                     Image(systemName: "chevron.left")
                 }
@@ -57,7 +59,9 @@ struct RecordView: View {
                     .font(AppFonts.sectionTitle)
                 Spacer()
                 Button {
-                    withAnimation { selectedDate = Calendar.current.date(byAdding: .month, value: 1, to: selectedDate)! }
+                    if let next = Calendar.current.date(byAdding: .month, value: 1, to: selectedDate) {
+                        withAnimation { selectedDate = next }
+                    }
                 } label: {
                     Image(systemName: "chevron.right")
                 }
@@ -125,6 +129,7 @@ struct RecordView: View {
             )
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("\(cal.component(.day, from: date))日\(hasRecords ? "，有记录" : "")")
     }
 
     // MARK: - 选中日期记录
@@ -179,8 +184,8 @@ struct RecordView: View {
 
     private var weekSummary: some View {
         let cal = Calendar.current
-        let startOfWeek = cal.date(from: cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date.now))!
-        let endOfWeek = cal.date(byAdding: .day, value: 7, to: startOfWeek)!
+        let startOfWeek = cal.date(from: cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date.now)) ?? Date.now
+        let endOfWeek = cal.date(byAdding: .day, value: 7, to: startOfWeek) ?? Date.now
         let weekRecs = allRecords.filter { $0.date >= startOfWeek && $0.date < endOfWeek }
 
         return VStack(alignment: .leading, spacing: 10) {
@@ -216,25 +221,34 @@ struct RecordView: View {
         return allRecords.filter { cal.isDate($0.date, inSameDayAs: date) }
     }
 
-    private var monthYearString: String {
+    private static let monthYearFormatter: DateFormatter = {
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy年M月"
-        return fmt.string(from: selectedDate)
-    }
+        return fmt
+    }()
 
-    private var selectedDateString: String {
+    private static let selectedDateFormatter: DateFormatter = {
         let fmt = DateFormatter()
         fmt.dateFormat = "M月d日 EEEE"
         fmt.locale = Locale(identifier: "zh_CN")
-        return fmt.string(from: selectedDate)
+        return fmt
+    }()
+
+    private var monthYearString: String {
+        Self.monthYearFormatter.string(from: selectedDate)
+    }
+
+    private var selectedDateString: String {
+        Self.selectedDateFormatter.string(from: selectedDate)
     }
 
     private var calendarDays: [Date?] {
         let cal = Calendar.current
         let comps = cal.dateComponents([.year, .month], from: selectedDate)
-        let firstOfMonth = cal.date(from: comps)!
+        guard let firstOfMonth = cal.date(from: comps),
+              let range = cal.range(of: .day, in: .month, for: firstOfMonth) else { return [] }
         let weekdayOfFirst = cal.component(.weekday, from: firstOfMonth) - 1 // 0=Sun
-        let daysInMonth = cal.range(of: .day, in: .month, for: firstOfMonth)!.count
+        let daysInMonth = range.count
 
         var days: [Date?] = Array(repeating: nil, count: weekdayOfFirst)
         for d in 1...daysInMonth {

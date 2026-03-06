@@ -132,7 +132,9 @@ enum PriceRange: String, Codable, CaseIterable, Identifiable {
 
 // MARK: - 卡牌稀有度 CardRarity
 
-enum CardRarity: String, Codable, CaseIterable {
+enum CardRarity: String, Codable, CaseIterable, Identifiable {
+    var id: String { rawValue }
+
     case common    = "common"
     case rare      = "rare"
     case legendary = "legendary"
@@ -164,7 +166,9 @@ enum CardRarity: String, Codable, CaseIterable {
 
 // MARK: - 五行属性 (用于食运系统)
 
-enum FiveElement: String, Codable, CaseIterable {
+enum FiveElement: String, Codable, CaseIterable, Identifiable {
+    var id: String { rawValue }
+
     case metal = "金"
     case wood  = "木"
     case water = "水"

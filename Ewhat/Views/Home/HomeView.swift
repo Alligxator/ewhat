@@ -76,7 +76,7 @@ struct HomeView: View {
         .onAppear {
             ensurePreference()
             HapticsManager.prepare()
-            recordVM.modelContext = modelContext
+            recordVM.configure(modelContext: modelContext)
             recordVM.refreshAll()
             cardVM.setRecentFoods(recordVM.recentFoodNames())
         }

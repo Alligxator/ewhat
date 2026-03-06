@@ -4,6 +4,7 @@ import SwiftUI
 struct FortuneCardView: View {
     let fortune: DailyFortune
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var floatOffset: CGFloat = 0
     @State private var glowOpacity: Double = 0.2
     @State private var contentOpacity: Double = 0.85
@@ -120,6 +121,7 @@ struct FortuneCardView: View {
         )
         .offset(y: floatOffset)
         .onAppear {
+            guard !reduceMotion else { return }
             // 缓慢上下浮动
             withAnimation(AppAnimations.fortuneFloat) {
                 floatOffset = -5

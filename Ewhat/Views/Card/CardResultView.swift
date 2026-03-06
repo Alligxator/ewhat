@@ -113,6 +113,7 @@ struct CardResultView: View {
             .foregroundStyle(AppColors.reject.opacity(rejectOpacity))
             .scaleEffect(1.0 + rejectOpacity * 0.15)
             .padding(.leading, 24)
+            .accessibilityLabel("向左滑动换一个")
 
             Spacer()
 
@@ -126,6 +127,7 @@ struct CardResultView: View {
             .foregroundStyle(AppColors.confirm.opacity(confirmOpacity))
             .scaleEffect(1.0 + confirmOpacity * 0.15)
             .padding(.trailing, 24)
+            .accessibilityLabel("向右滑动确认选择")
         }
     }
 

@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// 饮食记录管理 ViewModel
+@MainActor
 @Observable
 final class RecordViewModel {
 
@@ -19,7 +20,11 @@ final class RecordViewModel {
     /// 今日记录
     var todayRecords: [MealRecord] = []
 
-    var modelContext: ModelContext?
+    private(set) var modelContext: ModelContext?
+
+    func configure(modelContext: ModelContext) {
+        self.modelContext = modelContext
+    }
 
     // MARK: - CRUD
 
@@ -52,7 +57,13 @@ final class RecordViewModel {
 
     /// 保存上下文
     private func save() {
-        try? modelContext?.save()
+        do {
+            try modelContext?.save()
+        } catch {
+            #if DEBUG
+            print("[RecordViewModel] save failed: \(error)")
+            #endif
+        }
     }
 
     // MARK: - 查询
@@ -79,7 +90,7 @@ final class RecordViewModel {
     /// 获取最近 N 天的食物名称列表（用于抽卡去重）
     func recentFoodNames(days: Int = 7) -> [String] {
         let cal = Calendar.current
-        let start = cal.date(byAdding: .day, value: -days, to: .now)!
+        guard let start = cal.date(byAdding: .day, value: -days, to: .now) else { return [] }
         return fetchRecords(from: start, to: .now).map(\.foodName)
     }
 
@@ -90,17 +101,17 @@ final class RecordViewModel {
 
         // 今日
         let startOfDay = cal.startOfDay(for: now)
-        let endOfDay = cal.date(byAdding: .day, value: 1, to: startOfDay)!
+        guard let endOfDay = cal.date(byAdding: .day, value: 1, to: startOfDay) else { return }
         todayRecords = fetchRecords(from: startOfDay, to: endOfDay)
 
         // 本周
-        let startOfWeek = cal.date(from: cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: now))!
-        let endOfWeek = cal.date(byAdding: .day, value: 7, to: startOfWeek)!
+        guard let startOfWeek = cal.date(from: cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: now)),
+              let endOfWeek = cal.date(byAdding: .day, value: 7, to: startOfWeek) else { return }
         weekRecords = fetchRecords(from: startOfWeek, to: endOfWeek)
 
         // 本月
-        let startOfMonth = cal.date(from: cal.dateComponents([.year, .month], from: now))!
-        let endOfMonth = cal.date(byAdding: .month, value: 1, to: startOfMonth)!
+        guard let startOfMonth = cal.date(from: cal.dateComponents([.year, .month], from: now)),
+              let endOfMonth = cal.date(byAdding: .month, value: 1, to: startOfMonth) else { return }
         monthRecords = fetchRecords(from: startOfMonth, to: endOfMonth)
 
         // 全量（供日历视图使用）
@@ -186,7 +197,7 @@ final class RecordViewModel {
     func records(for date: Date) -> [MealRecord] {
         let cal = Calendar.current
         let start = cal.startOfDay(for: date)
-        let end = cal.date(byAdding: .day, value: 1, to: start)!
+        guard let end = cal.date(byAdding: .day, value: 1, to: start) else { return [] }
         return records.filter { $0.date >= start && $0.date < end }
     }
 

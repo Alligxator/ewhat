@@ -164,7 +164,7 @@ extension MealRecord {
     static var todayPredicate: Predicate<MealRecord> {
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: .now)
-        let endOfDay = calendar.date(byAdding: .day, value: 1, to: startOfDay)!
+        let endOfDay = calendar.date(byAdding: .day, value: 1, to: startOfDay) ?? startOfDay.addingTimeInterval(86400)
         return #Predicate<MealRecord> { record in
             record.date >= startOfDay && record.date < endOfDay
         }

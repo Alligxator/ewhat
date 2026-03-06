@@ -79,7 +79,7 @@ struct BlacklistView: View {
         .navigationTitle("食物黑名单")
         .onAppear {
             ensurePreference()
-            allFoods = FoodDatabase.loadAll()
+            allFoods = FoodDatabase.allFoods
         }
     }
 
