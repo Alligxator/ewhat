@@ -1,0 +1,4012 @@
+[
+  {
+    "id": "4f35a6ad-32ce-44da-8eb7-eec3d842f5c0",
+    "name": "麻婆豆腐",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "麻",
+      "豆腐",
+      "下饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🌶️",
+    "funText": "麻到灵魂出窍，辣到欲罢不能",
+    "rarity": "common"
+  },
+  {
+    "id": "fbb64ab0-40ef-44b4-8aca-39b4a953a2dc",
+    "name": "回锅肉",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "五花肉",
+      "下饭",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "川菜之王，米饭杀手",
+    "rarity": "common"
+  },
+  {
+    "id": "16018441-6548-4f66-8644-9a3fb39bebb7",
+    "name": "宫保鸡丁",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "花生",
+      "鸡肉",
+      "经典"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "国宴级别的下饭神器",
+    "rarity": "common"
+  },
+  {
+    "id": "7cfe518e-5f6c-46dc-800e-c369ed5c0098",
+    "name": "水煮牛肉",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "麻",
+      "牛肉",
+      "重口"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐂",
+    "funText": "辣椒比肉多，但就是好吃",
+    "rarity": "rare"
+  },
+  {
+    "id": "342c1a94-b52b-4f1e-97a8-f718ea75820f",
+    "name": "水煮鱼",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "麻",
+      "鱼",
+      "水煮"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐟",
+    "funText": "在辣椒的海洋里找鱼",
+    "rarity": "rare"
+  },
+  {
+    "id": "19c513cd-6523-4500-92a3-901cd56e493d",
+    "name": "鱼香肉丝",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "甜酸辣",
+      "肉丝",
+      "下饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥢",
+    "funText": "没有鱼的鱼香，哲学",
+    "rarity": "common"
+  },
+  {
+    "id": "71f6d0af-eaf8-47e4-9b6b-9d8dd88dc372",
+    "name": "辣子鸡",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "鸡肉",
+      "干辣椒"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🌶️",
+    "funText": "在辣椒堆里挖宝的快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "634a9399-6c39-4c4d-b7d6-ddd02727aca4",
+    "name": "夫妻肺片",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "凉菜",
+      "牛肉",
+      "卤味"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "和夫妻没关系，和肺也没关系",
+    "rarity": "common"
+  },
+  {
+    "id": "e020a7be-62b9-402d-a797-4aec4efdb5b6",
+    "name": "担担面",
+    "cuisine": "川菜",
+    "category": "主食",
+    "tags": [
+      "辣",
+      "面条",
+      "芝麻酱"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "担子挑出来的人间美味",
+    "rarity": "common"
+  },
+  {
+    "id": "ae3879b7-2c71-45b1-a0fc-9870f66de624",
+    "name": "酸菜鱼",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "酸辣",
+      "鱼",
+      "酸菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐠",
+    "funText": "酸酸辣辣，一锅鲜到底",
+    "rarity": "common"
+  },
+  {
+    "id": "29a7167e-669f-4bc9-9ed4-ee554d025927",
+    "name": "毛血旺",
+    "cuisine": "川菜",
+    "category": "火锅",
+    "tags": [
+      "辣",
+      "血旺",
+      "毛肚",
+      "重口"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🫕",
+    "funText": "什么都能往里放的神奇料理",
+    "rarity": "rare"
+  },
+  {
+    "id": "b55b30b1-99fb-4407-8343-1d90f42bb0e7",
+    "name": "口水鸡",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "凉菜",
+      "鸡肉"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐔",
+    "funText": "名字让人流口水的凉菜",
+    "rarity": "common"
+  },
+  {
+    "id": "0c58422a-76ed-45e0-9846-b149523711e6",
+    "name": "钟水饺",
+    "cuisine": "川菜",
+    "category": "主食",
+    "tags": [
+      "辣",
+      "水饺",
+      "红油"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥟",
+    "funText": "红油拌出的成都味道",
+    "rarity": "common"
+  },
+  {
+    "id": "ccf460e4-148f-4454-9c10-183b84d087b6",
+    "name": "龙抄手",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "馄饨",
+      "汤"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥟",
+    "funText": "四川版馄饨，龙形出水",
+    "rarity": "common"
+  },
+  {
+    "id": "18f7987f-1efa-4e5a-86f5-06d51ba34206",
+    "name": "串串香",
+    "cuisine": "川菜",
+    "category": "火锅",
+    "tags": [
+      "辣",
+      "串串",
+      "麻辣"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍢",
+    "funText": "签签数到手软的快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "3c9237d0-bf17-4d68-83d4-357f7a7a7426",
+    "name": "冒菜",
+    "cuisine": "川菜",
+    "category": "火锅",
+    "tags": [
+      "辣",
+      "麻辣",
+      "蔬菜",
+      "一人食"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥬",
+    "funText": "一个人的火锅叫冒菜",
+    "rarity": "common"
+  },
+  {
+    "id": "ce64996e-1c27-466f-ae59-f80596e67ec1",
+    "name": "麻辣火锅",
+    "cuisine": "川菜",
+    "category": "火锅",
+    "tags": [
+      "辣",
+      "麻",
+      "火锅",
+      "聚餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🫕",
+    "funText": "没有什么是一顿火锅解决不了的",
+    "rarity": "rare"
+  },
+  {
+    "id": "468c0056-8088-4efb-903c-fbc09595f5e4",
+    "name": "甜皮鸭",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "甜",
+      "鸭",
+      "卤味"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🦆",
+    "funText": "乐山甜皮鸭，一口入魂",
+    "rarity": "rare"
+  },
+  {
+    "id": "03e5b0b0-fd8f-48d4-a7a1-76e45e4079f9",
+    "name": "蒜泥白肉",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "蒜香",
+      "凉菜",
+      "五花肉"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🧄",
+    "funText": "蒜泥和白肉的完美邂逅",
+    "rarity": "common"
+  },
+  {
+    "id": "2e062427-b7bb-41e1-8425-32cff820bb6a",
+    "name": "干锅牛蛙",
+    "cuisine": "川菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "牛蛙",
+      "干锅"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐸",
+    "funText": "呱呱叫的美味，别多想",
+    "rarity": "rare"
+  },
+  {
+    "id": "88db02f2-81fd-4fb3-a002-15cf24d50174",
+    "name": "红油抄手",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "馄饨",
+      "红油"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥟",
+    "funText": "红油是灵魂，抄手是躯壳",
+    "rarity": "common"
+  },
+  {
+    "id": "62afc178-80b6-4f3b-b818-80a93adeecd9",
+    "name": "棒棒鸡",
+    "cuisine": "川菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "凉菜",
+      "鸡肉",
+      "芝麻"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "棒棒敲出来的嫩滑鸡肉",
+    "rarity": "common"
+  },
+  {
+    "id": "c65b137a-db26-411f-9c81-f383ba7a1960",
+    "name": "白切鸡",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "清淡",
+      "鸡肉",
+      "蘸料"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐔",
+    "funText": "检验粤菜师傅水平的试金石",
+    "rarity": "common"
+  },
+  {
+    "id": "c1866c7c-16f7-4055-80c8-3d15698f1db9",
+    "name": "烧鹅",
+    "cuisine": "粤菜",
+    "category": "小吃",
+    "tags": [
+      "烧腊",
+      "鹅",
+      "皮脆"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍖",
+    "funText": "皮脆肉嫩，一口封神",
+    "rarity": "rare"
+  },
+  {
+    "id": "d032b1f5-b784-45cb-9f0f-26c9b3739250",
+    "name": "叉烧",
+    "cuisine": "粤菜",
+    "category": "小吃",
+    "tags": [
+      "烧腊",
+      "猪肉",
+      "蜜汁"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "蜜汁叉烧，饭扫光",
+    "rarity": "common"
+  },
+  {
+    "id": "cbc85e47-ecbe-460b-bfa4-943fdd96fed4",
+    "name": "虾饺",
+    "cuisine": "粤菜",
+    "category": "主食",
+    "tags": [
+      "早茶",
+      "虾",
+      "蒸点"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥟",
+    "funText": "早茶四大天王之首",
+    "rarity": "common"
+  },
+  {
+    "id": "eeb9e3cf-e3ce-42cd-8811-3ee4621ad96f",
+    "name": "肠粉",
+    "cuisine": "粤菜",
+    "category": "小吃",
+    "tags": [
+      "早茶",
+      "米浆",
+      "清淡"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥞",
+    "funText": "白如雪薄如纸的广式浪漫",
+    "rarity": "common"
+  },
+  {
+    "id": "0a5d6b7c-36cb-4c4b-897b-575b865e2104",
+    "name": "煲仔饭",
+    "cuisine": "粤菜",
+    "category": "主食",
+    "tags": [
+      "米饭",
+      "煲仔",
+      "锅巴"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍚",
+    "funText": "锅巴是煲仔饭的灵魂伴侣",
+    "rarity": "common"
+  },
+  {
+    "id": "33ed9900-85d6-42dc-b212-903a8b787ed9",
+    "name": "艇仔粥",
+    "cuisine": "粤菜",
+    "category": "汤品",
+    "tags": [
+      "粥",
+      "海鲜",
+      "清淡"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥣",
+    "funText": "一碗粥，半个广州",
+    "rarity": "common"
+  },
+  {
+    "id": "ca676bad-4b2c-4eaa-8643-5bb447d7b10a",
+    "name": "白灼虾",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "清淡",
+      "虾",
+      "蘸料"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🦐",
+    "funText": "鲜到不需要任何调料",
+    "rarity": "common"
+  },
+  {
+    "id": "813b24e5-d881-422d-b32e-45d3ef339c0e",
+    "name": "清蒸石斑鱼",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "清淡",
+      "鱼",
+      "蒸",
+      "高档"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🐟",
+    "funText": "粤菜的终极哲学：清蒸",
+    "rarity": "legendary"
+  },
+  {
+    "id": "edb835f7-63c4-4d3e-a5d8-c81256246498",
+    "name": "菠萝咕噜肉",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "猪肉",
+      "菠萝"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍍",
+    "funText": "酸甜交织的味觉过山车",
+    "rarity": "common"
+  },
+  {
+    "id": "dde355d6-1ece-422e-8600-acad3583d449",
+    "name": "干炒牛河",
+    "cuisine": "粤菜",
+    "category": "主食",
+    "tags": [
+      "河粉",
+      "牛肉",
+      "炒"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍝",
+    "funText": "镬气十足，越简单越考功夫",
+    "rarity": "common"
+  },
+  {
+    "id": "533fc07a-bb93-4330-9abd-30426101d597",
+    "name": "云吞面",
+    "cuisine": "粤菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "馄饨",
+      "汤"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "广州人的灵魂早餐",
+    "rarity": "common"
+  },
+  {
+    "id": "9b99f4a8-8fc8-43ca-911d-347139a9b80f",
+    "name": "老火靓汤",
+    "cuisine": "粤菜",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "煲汤",
+      "滋补"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "广东人的命是汤给的",
+    "rarity": "common"
+  },
+  {
+    "id": "fb2645ee-4cde-47e6-9625-357d84f13c8d",
+    "name": "豉汁蒸排骨",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "蒸",
+      "排骨",
+      "豆豉"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "早茶标配，蒸出排骨的真味",
+    "rarity": "common"
+  },
+  {
+    "id": "ec1a3f3b-2cff-4415-93da-fab40f6fbcfd",
+    "name": "脆皮烧肉",
+    "cuisine": "粤菜",
+    "category": "小吃",
+    "tags": [
+      "烧腊",
+      "猪肉",
+      "皮脆"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥓",
+    "funText": "嘎嘣脆的快乐你懂的",
+    "rarity": "common"
+  },
+  {
+    "id": "3cee6ad0-bd10-4bdf-b459-806842c649ba",
+    "name": "盐焗鸡",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "盐焗",
+      "鸡肉",
+      "客家"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐔",
+    "funText": "盐的艺术，鸡的升华",
+    "rarity": "common"
+  },
+  {
+    "id": "637d11ed-7b14-4abb-a1fa-30850d619057",
+    "name": "蛋挞",
+    "cuisine": "粤菜",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "蛋奶",
+      "酥皮"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥧",
+    "funText": "刚出炉的蛋挞能治愈一切",
+    "rarity": "common"
+  },
+  {
+    "id": "86c90965-3860-43ab-bddf-cf841d180ce1",
+    "name": "早茶拼盘",
+    "cuisine": "粤菜",
+    "category": "套餐",
+    "tags": [
+      "早茶",
+      "点心",
+      "蒸点"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🫖",
+    "funText": "一盅两件，叹世界",
+    "rarity": "rare"
+  },
+  {
+    "id": "6ba44e5d-f90d-4dc5-af9d-9fd070fb4568",
+    "name": "凤爪",
+    "cuisine": "粤菜",
+    "category": "小吃",
+    "tags": [
+      "早茶",
+      "鸡爪",
+      "豆豉"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐔",
+    "funText": "啃凤爪的快乐无法言喻",
+    "rarity": "common"
+  },
+  {
+    "id": "819f6337-8e6a-41e1-a79c-c7e74e55ad0e",
+    "name": "剁椒鱼头",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "鱼头",
+      "剁椒",
+      "蒸"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐟",
+    "funText": "鸿运当头，辣味开路",
+    "rarity": "rare"
+  },
+  {
+    "id": "754a3662-db85-4e87-9b80-ed1d5dcdf077",
+    "name": "小炒黄牛肉",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "牛肉",
+      "小炒"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐂",
+    "funText": "湘菜馆子的点单率冠军",
+    "rarity": "common"
+  },
+  {
+    "id": "f375f789-9309-4ccc-866e-081c29b2b591",
+    "name": "辣椒炒肉",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "猪肉",
+      "青椒",
+      "下饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🌶️",
+    "funText": "湖南人的妈妈味道",
+    "rarity": "common"
+  },
+  {
+    "id": "a5b866c7-a20d-441b-97e8-e6fb5d82f447",
+    "name": "长沙臭豆腐",
+    "cuisine": "湘菜",
+    "category": "小吃",
+    "tags": [
+      "臭豆腐",
+      "油炸",
+      "小吃"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🧈",
+    "funText": "闻着臭吃着香的玄学",
+    "rarity": "common"
+  },
+  {
+    "id": "8e5cab10-4cff-422b-a5af-6c97b3489f65",
+    "name": "口味虾",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "小龙虾",
+      "夜宵"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🦞",
+    "funText": "夏天没有小龙虾是不完整的",
+    "rarity": "rare"
+  },
+  {
+    "id": "5d92ed57-e1ad-42e3-80e8-7a1d8b498454",
+    "name": "东安鸡",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "酸辣",
+      "鸡肉",
+      "醋"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐔",
+    "funText": "八大菜系名菜，酸辣鲜香",
+    "rarity": "rare"
+  },
+  {
+    "id": "563b4254-21cf-425c-b47f-31339732a984",
+    "name": "腊味合蒸",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "腊味",
+      "蒸",
+      "腊肉腊肠"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "湖南人过年的味道",
+    "rarity": "common"
+  },
+  {
+    "id": "1eab86f9-21db-4b98-834c-4fa697a1235c",
+    "name": "酱板鸭",
+    "cuisine": "湘菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "鸭",
+      "酱卤"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🦆",
+    "funText": "辣到怀疑人生但停不下嘴",
+    "rarity": "common"
+  },
+  {
+    "id": "fbf8756b-bc0c-4895-b6cf-874d3aebbc43",
+    "name": "外婆菜",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "下饭",
+      "腌菜",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥬",
+    "funText": "每个湖南人心中都有一道外婆菜",
+    "rarity": "common"
+  },
+  {
+    "id": "9108f190-c88c-4b79-a5bc-94308e29b3b4",
+    "name": "干锅花菜",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "花菜",
+      "干锅"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥦",
+    "funText": "花菜的最高礼遇",
+    "rarity": "common"
+  },
+  {
+    "id": "503f6999-470f-40d0-8da1-b87e0fb6a907",
+    "name": "紫苏炒田螺",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "田螺",
+      "紫苏",
+      "夜宵"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐚",
+    "funText": "嗦螺的快乐你不懂",
+    "rarity": "common"
+  },
+  {
+    "id": "3c29424f-2998-4d4e-a581-9fafffe7dd0b",
+    "name": "浏阳蒸菜",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "蒸",
+      "家常",
+      "清淡"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍲",
+    "funText": "蒸出来的湖南温柔面",
+    "rarity": "common"
+  },
+  {
+    "id": "cd5059a0-4e9f-4477-bb5f-864f4dc9f32e",
+    "name": "左宗棠鸡",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "鸡肉",
+      "油炸"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "美国人最爱的中国菜",
+    "rarity": "common"
+  },
+  {
+    "id": "6e6855a8-80fb-44b2-92d6-38d4f3568d97",
+    "name": "湖南米粉",
+    "cuisine": "湘菜",
+    "category": "主食",
+    "tags": [
+      "米粉",
+      "汤粉",
+      "辣"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "嗦粉！嗦粉！嗦粉！",
+    "rarity": "common"
+  },
+  {
+    "id": "b08b8212-d7fa-4e65-8377-d1b59f12e64a",
+    "name": "干锅肥肠",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "肥肠",
+      "干锅",
+      "重口"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥘",
+    "funText": "肥肠爱好者的终极归宿",
+    "rarity": "common"
+  },
+  {
+    "id": "9a0edfbe-1eb6-4335-83a5-c8bd8919d4cd",
+    "name": "攸县香干",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "豆干",
+      "小炒"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🧈",
+    "funText": "不起眼但越嚼越香",
+    "rarity": "common"
+  },
+  {
+    "id": "77da7ee8-6845-4531-a027-26fe25c76a24",
+    "name": "擂辣椒",
+    "cuisine": "湘菜",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "青椒",
+      "蒜",
+      "凉菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🌶️",
+    "funText": "擂出来的湖南灵魂",
+    "rarity": "common"
+  },
+  {
+    "id": "f33d5fdb-ebef-46b6-b316-92545b5bc758",
+    "name": "锅包肉",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "猪肉",
+      "油炸"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "东北菜的排面担当",
+    "rarity": "rare"
+  },
+  {
+    "id": "d0f3574d-2ed3-4bd4-8e13-ecf11b9ccac0",
+    "name": "猪肉炖粉条",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "炖菜",
+      "猪肉",
+      "粉条",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "东北铁锅炖，越炖越有味",
+    "rarity": "common"
+  },
+  {
+    "id": "5129dddb-92e0-475d-b5c2-990294ec0e8d",
+    "name": "小鸡炖蘑菇",
+    "cuisine": "东北菜",
+    "category": "汤品",
+    "tags": [
+      "炖菜",
+      "鸡肉",
+      "蘑菇"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐔",
+    "funText": "姑爷来了才做的硬菜",
+    "rarity": "common"
+  },
+  {
+    "id": "b667397a-8834-4be1-a877-d80ef9659469",
+    "name": "铁锅炖",
+    "cuisine": "东北菜",
+    "category": "火锅",
+    "tags": [
+      "炖菜",
+      "大锅",
+      "聚餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🍳",
+    "funText": "锅比脸大，菜比锅多",
+    "rarity": "rare"
+  },
+  {
+    "id": "7aa73488-9a53-4cbe-8c64-08eeead599dd",
+    "name": "地三鲜",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "土豆",
+      "茄子",
+      "青椒",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥔",
+    "funText": "三种蔬菜的神仙组合",
+    "rarity": "common"
+  },
+  {
+    "id": "f341113c-905a-4309-8910-2d61635ed33c",
+    "name": "东北大拌菜",
+    "cuisine": "东北菜",
+    "category": "凉菜",
+    "tags": [
+      "凉菜",
+      "蔬菜",
+      "清爽"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥗",
+    "funText": "东北人的蔬菜沙拉",
+    "rarity": "common"
+  },
+  {
+    "id": "ce628be2-bcff-4a19-8227-9a24be4e88e3",
+    "name": "杀猪菜",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "酸菜",
+      "血肠",
+      "猪肉",
+      "重口"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐷",
+    "funText": "年味十足的东北记忆",
+    "rarity": "common"
+  },
+  {
+    "id": "979b3b67-9c5b-43ed-8b88-65f7b83554e3",
+    "name": "东北饺子",
+    "cuisine": "东北菜",
+    "category": "主食",
+    "tags": [
+      "饺子",
+      "面食",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥟",
+    "funText": "好吃不过饺子，舒服不过倒着",
+    "rarity": "common"
+  },
+  {
+    "id": "a4850616-fa17-4fbf-81fa-95dc1b9d41df",
+    "name": "溜肉段",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "猪肉",
+      "油炸"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "外焦里嫩的下饭神器",
+    "rarity": "common"
+  },
+  {
+    "id": "0530083e-321b-4842-9c0e-a76cb0b73ac4",
+    "name": "尖椒干豆腐",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "豆腐",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🌶️",
+    "funText": "东北食堂的灵魂菜",
+    "rarity": "common"
+  },
+  {
+    "id": "0b8a2fa2-6267-434c-8885-bff173e39d52",
+    "name": "烤冷面",
+    "cuisine": "东北菜",
+    "category": "小吃",
+    "tags": [
+      "烤",
+      "冷面",
+      "街头小吃"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🫓",
+    "funText": "东北街头的深夜诱惑",
+    "rarity": "common"
+  },
+  {
+    "id": "64b9ca33-fd40-475e-9196-a2908f79daab",
+    "name": "酸菜白肉",
+    "cuisine": "东北菜",
+    "category": "火锅",
+    "tags": [
+      "酸菜",
+      "猪肉",
+      "炖菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥬",
+    "funText": "酸菜的灵魂在白肉里",
+    "rarity": "common"
+  },
+  {
+    "id": "28be24db-7df6-44bc-aef4-e6a665e51161",
+    "name": "血肠",
+    "cuisine": "东北菜",
+    "category": "小吃",
+    "tags": [
+      "血肠",
+      "猪血",
+      "传统"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🌭",
+    "funText": "东北年味的灵魂选手",
+    "rarity": "common"
+  },
+  {
+    "id": "76d9517f-91af-4f05-9aff-09a87f185534",
+    "name": "红烧肘子",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "红烧",
+      "猪肘",
+      "硬菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🍖",
+    "funText": "硬菜中的硬菜，排面拉满",
+    "rarity": "rare"
+  },
+  {
+    "id": "b1928214-6612-43d1-b636-37730b2f2a90",
+    "name": "东北乱炖",
+    "cuisine": "东北菜",
+    "category": "热菜",
+    "tags": [
+      "炖菜",
+      "蔬菜",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥘",
+    "funText": "万物皆可炖，炖完都好吃",
+    "rarity": "common"
+  },
+  {
+    "id": "ffb3f775-53c4-4617-9095-ce27e3f23535",
+    "name": "拔丝地瓜",
+    "cuisine": "东北菜",
+    "category": "甜品",
+    "tags": [
+      "甜",
+      "地瓜",
+      "油炸"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍠",
+    "funText": "拉丝拉到天花板的甜蜜",
+    "rarity": "common"
+  },
+  {
+    "id": "c1bc8b9c-881a-4a89-9492-083b6963aaf7",
+    "name": "蘸酱菜",
+    "cuisine": "东北菜",
+    "category": "凉菜",
+    "tags": [
+      "蔬菜",
+      "大酱",
+      "清爽"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥬",
+    "funText": "东北人吃草的正确打开方式",
+    "rarity": "common"
+  },
+  {
+    "id": "bddbf357-de38-4df3-aa6d-e57dde5b01ae",
+    "name": "哈尔滨红肠",
+    "cuisine": "东北菜",
+    "category": "小吃",
+    "tags": [
+      "红肠",
+      "香肠",
+      "俄式"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🌭",
+    "funText": "哈尔滨的城市名片",
+    "rarity": "common"
+  },
+  {
+    "id": "5dc54c19-34ce-4aee-bfe1-d52a8939701a",
+    "name": "大列巴",
+    "cuisine": "东北菜",
+    "category": "小吃",
+    "tags": [
+      "面包",
+      "俄式",
+      "主食"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍞",
+    "funText": "能当武器的面包，真实的",
+    "rarity": "common"
+  },
+  {
+    "id": "eace9888-47aa-42a6-8566-153eb29328fa",
+    "name": "锅贴",
+    "cuisine": "东北菜",
+    "category": "主食",
+    "tags": [
+      "煎饺",
+      "面食",
+      "焦底"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥟",
+    "funText": "底部焦脆是锅贴的灵魂",
+    "rarity": "common"
+  },
+  {
+    "id": "9f7ff35f-8e31-4e5f-bac2-6fe7ed041a9a",
+    "name": "东坡肉",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "红烧",
+      "五花肉",
+      "甜",
+      "经典"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🥩",
+    "funText": "苏东坡代言的千年美食",
+    "rarity": "legendary"
+  },
+  {
+    "id": "a20f1070-3c64-4a4e-88bc-1f7dfed29538",
+    "name": "西湖醋鱼",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "鱼",
+      "西湖"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐟",
+    "funText": "吃的不是鱼，是西湖的故事",
+    "rarity": "rare"
+  },
+  {
+    "id": "c415d09a-d05f-40a9-9c3b-09decc583046",
+    "name": "龙井虾仁",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "清淡",
+      "虾仁",
+      "龙井茶"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🦐",
+    "funText": "茶香虾鲜，江南的优雅",
+    "rarity": "rare"
+  },
+  {
+    "id": "f8908e68-5ca2-490d-aa5a-7c8fabeeda4c",
+    "name": "叫化鸡",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "鸡肉",
+      "荷叶",
+      "泥烤"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐔",
+    "funText": "乞丐发明的贵族美食",
+    "rarity": "legendary"
+  },
+  {
+    "id": "794511d2-dbc7-4264-8a8a-27fe3dd42947",
+    "name": "糖醋里脊",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "猪肉",
+      "油炸"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍖",
+    "funText": "没有人能拒绝糖醋味",
+    "rarity": "common"
+  },
+  {
+    "id": "5dc4beb0-7722-4254-a224-cd06a813b4e0",
+    "name": "狮子头",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "肉丸",
+      "清炖",
+      "淮扬"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🧆",
+    "funText": "比狮子温柔一万倍的肉丸",
+    "rarity": "common"
+  },
+  {
+    "id": "ae795f7c-957d-4d82-a98e-79b4ef87a73b",
+    "name": "蟹粉小笼包",
+    "cuisine": "江浙菜",
+    "category": "主食",
+    "tags": [
+      "蟹黄",
+      "小笼包",
+      "蒸"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🥟",
+    "funText": "一口汤汁，满嘴鲜香",
+    "rarity": "rare"
+  },
+  {
+    "id": "683d6607-15c0-46ce-8dc1-5471a05ae84c",
+    "name": "生煎包",
+    "cuisine": "江浙菜",
+    "category": "主食",
+    "tags": [
+      "煎包",
+      "猪肉",
+      "底脆"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥟",
+    "funText": "上海早餐的顶流",
+    "rarity": "common"
+  },
+  {
+    "id": "1d7eb6ca-d197-4ba6-929b-fe4128c272db",
+    "name": "葱油面",
+    "cuisine": "江浙菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "葱油",
+      "简单"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "一碗葱油面，胜过山珍海味",
+    "rarity": "common"
+  },
+  {
+    "id": "10104db9-5d52-49a8-93c5-7bf2475a4c2f",
+    "name": "醉虾",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "虾",
+      "酒",
+      "凉菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🦐",
+    "funText": "虾都醉了，你还清醒吗",
+    "rarity": "rare"
+  },
+  {
+    "id": "ef535b1e-a3de-45ea-89e4-14e9fca27b51",
+    "name": "大闸蟹",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "蟹",
+      "秋季",
+      "高档"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🦀",
+    "funText": "秋风起，蟹脚痒，传说降临",
+    "rarity": "legendary"
+  },
+  {
+    "id": "bd386bdf-76c5-4d5a-a310-9b8946660d63",
+    "name": "油爆虾",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "虾",
+      "油爆",
+      "甜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🦐",
+    "funText": "壳都不想吐的甜蜜",
+    "rarity": "common"
+  },
+  {
+    "id": "b20dc976-c227-4b6f-b61e-23c649c0348e",
+    "name": "松鼠桂鱼",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "鱼",
+      "造型"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🐟",
+    "funText": "长得像松鼠的鱼，艺术品",
+    "rarity": "legendary"
+  },
+  {
+    "id": "534c772a-4e31-4766-8fd9-2695223220a4",
+    "name": "无锡排骨",
+    "cuisine": "江浙菜",
+    "category": "热菜",
+    "tags": [
+      "甜",
+      "排骨",
+      "红烧"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍖",
+    "funText": "甜到心里的无锡味道",
+    "rarity": "common"
+  },
+  {
+    "id": "4b51916e-5a17-40c9-91d3-a0203244256a",
+    "name": "阳春面",
+    "cuisine": "江浙菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "清汤",
+      "简单"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "大道至简，一碗清汤面",
+    "rarity": "common"
+  },
+  {
+    "id": "7870e23d-9486-4a91-9d6c-50f667332182",
+    "name": "鲜肉月饼",
+    "cuisine": "江浙菜",
+    "category": "小吃",
+    "tags": [
+      "月饼",
+      "猪肉",
+      "酥皮"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥮",
+    "funText": "南方人的月饼是咸的",
+    "rarity": "common"
+  },
+  {
+    "id": "6c047e97-2a2d-42d3-b0f6-9a11792e00f5",
+    "name": "笋干老鸭煲",
+    "cuisine": "江浙菜",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "鸭肉",
+      "笋干",
+      "煲"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "老鸭配笋干，鲜上加鲜",
+    "rarity": "common"
+  },
+  {
+    "id": "584ea6cd-973e-4c58-8a83-7d1b4af6a8f4",
+    "name": "桂花糯米藕",
+    "cuisine": "江浙菜",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "糯米",
+      "莲藕",
+      "桂花"
+    ],
+    "scene": [
+      "下午茶",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🌸",
+    "funText": "桂花香里的江南记忆",
+    "rarity": "common"
+  },
+  {
+    "id": "7b1d9222-9f7f-4f98-975a-4bdcd30644c9",
+    "name": "片儿川",
+    "cuisine": "江浙菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "笋",
+      "雪菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "杭州人的乡愁一碗面",
+    "rarity": "common"
+  },
+  {
+    "id": "4e570351-0ccf-4936-863c-ac6f9cd8c281",
+    "name": "酒酿圆子",
+    "cuisine": "江浙菜",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "酒酿",
+      "汤圆"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍡",
+    "funText": "微醺的甜蜜，冬日暖心",
+    "rarity": "common"
+  },
+  {
+    "id": "b02bd8a2-c6b0-4074-ae7f-97c18007653d",
+    "name": "肉夹馍",
+    "cuisine": "西北菜",
+    "category": "小吃",
+    "tags": [
+      "猪肉",
+      "馍",
+      "陕西"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥙",
+    "funText": "中国式汉堡，馍里乾坤大",
+    "rarity": "common"
+  },
+  {
+    "id": "80a08e37-0727-450c-85d8-af6e5ae5d4b0",
+    "name": "羊肉泡馍",
+    "cuisine": "西北菜",
+    "category": "汤品",
+    "tags": [
+      "羊肉",
+      "馍",
+      "汤",
+      "陕西"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "掰馍的仪式感，吃馍的幸福感",
+    "rarity": "rare"
+  },
+  {
+    "id": "36674f1c-e938-4da9-9c03-56e400a46a31",
+    "name": "凉皮",
+    "cuisine": "西北菜",
+    "category": "主食",
+    "tags": [
+      "凉菜",
+      "面皮",
+      "辣",
+      "夏天"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥗",
+    "funText": "三秦套餐的灵魂之一",
+    "rarity": "common"
+  },
+  {
+    "id": "eba9ffe8-898e-44ec-a103-58d52a4ec6b2",
+    "name": "biangbiang面",
+    "cuisine": "西北菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "宽面",
+      "油泼"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "字不会写但面一定要吃",
+    "rarity": "rare"
+  },
+  {
+    "id": "7627cfc3-38de-4703-8c6a-de4af0c14898",
+    "name": "手抓羊肉",
+    "cuisine": "西北菜",
+    "category": "热菜",
+    "tags": [
+      "羊肉",
+      "手抓",
+      "清真"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐑",
+    "funText": "大口吃肉的豪迈",
+    "rarity": "common"
+  },
+  {
+    "id": "392ea3ea-6a2e-4284-b607-1e7e1a8a14ad",
+    "name": "大盘鸡",
+    "cuisine": "西北菜",
+    "category": "热菜",
+    "tags": [
+      "鸡肉",
+      "土豆",
+      "面条",
+      "辣"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "盘子大到能洗澡",
+    "rarity": "common"
+  },
+  {
+    "id": "1592a635-cbd0-4012-a1ef-a6bfde07a3a7",
+    "name": "新疆烤羊肉串",
+    "cuisine": "西北菜",
+    "category": "烧烤",
+    "tags": [
+      "烧烤",
+      "羊肉",
+      "孜然"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍢",
+    "funText": "孜然和羊肉的完美恋爱",
+    "rarity": "common"
+  },
+  {
+    "id": "62f75480-6ed9-4d7e-bcdf-89a5937ed8aa",
+    "name": "兰州牛肉面",
+    "cuisine": "西北菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "牛肉",
+      "拉面",
+      "清汤"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "一清二白三红四绿五黄",
+    "rarity": "common"
+  },
+  {
+    "id": "4b389bc9-2086-4d94-aa84-95ba95606ed1",
+    "name": "油泼面",
+    "cuisine": "西北菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "油泼",
+      "辣",
+      "蒜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍝",
+    "funText": "滋啦一声，灵魂觉醒",
+    "rarity": "common"
+  },
+  {
+    "id": "35e9365a-9b4c-46b6-abfb-9f4f5ed74efa",
+    "name": "胡辣汤",
+    "cuisine": "西北菜",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "辣",
+      "早餐"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥣",
+    "funText": "河南人的清晨续命汤",
+    "rarity": "common"
+  },
+  {
+    "id": "310aaef7-6f83-4835-9e82-cd53a29fc89c",
+    "name": "甑糕",
+    "cuisine": "西北菜",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "糯米",
+      "红枣"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍰",
+    "funText": "甜糯软香的关中记忆",
+    "rarity": "common"
+  },
+  {
+    "id": "8db97628-091e-4a05-a256-069156979dc4",
+    "name": "烤全羊",
+    "cuisine": "西北菜",
+    "category": "烧烤",
+    "tags": [
+      "羊肉",
+      "烤",
+      "大餐",
+      "聚餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🐑",
+    "funText": "整只羊的终极浪漫",
+    "rarity": "legendary"
+  },
+  {
+    "id": "095f6c7a-894e-4053-a7d9-e21711e5cedb",
+    "name": "臊子面",
+    "cuisine": "西北菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "臊子",
+      "酸辣"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "岐山臊子面，酸辣鲜香",
+    "rarity": "common"
+  },
+  {
+    "id": "c2176c29-d1f0-4ea2-9a2f-e1388c054786",
+    "name": "馕坑烤肉",
+    "cuisine": "西北菜",
+    "category": "烧烤",
+    "tags": [
+      "烧烤",
+      "羊肉",
+      "馕坑"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "馕坑里的肉香四溢",
+    "rarity": "common"
+  },
+  {
+    "id": "46417879-4099-4aef-9edf-27319bd763bd",
+    "name": "羊杂汤",
+    "cuisine": "西北菜",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "羊杂",
+      "暖身"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍲",
+    "funText": "寒冬里的一碗暖意",
+    "rarity": "common"
+  },
+  {
+    "id": "da738340-e57c-4134-9740-4a202e141cfe",
+    "name": "手工拉条子",
+    "cuisine": "西北菜",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "拌面",
+      "新疆"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍝",
+    "funText": "新疆人的主食担当",
+    "rarity": "common"
+  },
+  {
+    "id": "1b34998c-8593-4788-952b-b86d31d8a90a",
+    "name": "酿皮子",
+    "cuisine": "西北菜",
+    "category": "小吃",
+    "tags": [
+      "凉菜",
+      "面皮",
+      "夏天"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥗",
+    "funText": "西北夏天的清凉密码",
+    "rarity": "common"
+  },
+  {
+    "id": "5f3d8b0e-bbcf-4d90-8678-738d30341896",
+    "name": "馕",
+    "cuisine": "西北菜",
+    "category": "小吃",
+    "tags": [
+      "面饼",
+      "新疆",
+      "主食"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🫓",
+    "funText": "新疆人民的面包，硬核主食",
+    "rarity": "common"
+  },
+  {
+    "id": "4654b390-3c4b-43aa-9f7b-677cd9775eb0",
+    "name": "寿司拼盘",
+    "cuisine": "日料",
+    "category": "套餐",
+    "tags": [
+      "寿司",
+      "生鱼",
+      "米饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🍣",
+    "funText": "一盘寿司，一场味觉旅行",
+    "rarity": "rare"
+  },
+  {
+    "id": "1506cf38-5008-4c4b-bca2-152b75908ce7",
+    "name": "日式拉面",
+    "cuisine": "日料",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "汤面",
+      "猪骨"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍜",
+    "funText": "吸溜声是对拉面最高的敬意",
+    "rarity": "common"
+  },
+  {
+    "id": "32116bbc-b21a-465e-b3ec-38da62d628de",
+    "name": "天妇罗",
+    "cuisine": "日料",
+    "category": "小吃",
+    "tags": [
+      "油炸",
+      "虾",
+      "蔬菜"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍤",
+    "funText": "炸出来的日式优雅",
+    "rarity": "common"
+  },
+  {
+    "id": "1639ac7a-71dc-4352-a0b6-73d51b605a5e",
+    "name": "鳗鱼饭",
+    "cuisine": "日料",
+    "category": "主食",
+    "tags": [
+      "鳗鱼",
+      "米饭",
+      "酱汁"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐍",
+    "funText": "酱汁鳗鱼盖饭，幸福感爆棚",
+    "rarity": "rare"
+  },
+  {
+    "id": "46ef2174-0553-46fc-a8ed-f891aae7fdaa",
+    "name": "刺身拼盘",
+    "cuisine": "日料",
+    "category": "热菜",
+    "tags": [
+      "生鱼",
+      "海鲜",
+      "清淡"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🐟",
+    "funText": "新鲜到能感受到大海的味道",
+    "rarity": "legendary"
+  },
+  {
+    "id": "3d116d70-f9dc-4a70-ac16-4fd9be9c2914",
+    "name": "味噌汤定食",
+    "cuisine": "日料",
+    "category": "套餐",
+    "tags": [
+      "定食",
+      "味噌",
+      "套餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍱",
+    "funText": "日本上班族的每日能量站",
+    "rarity": "common"
+  },
+  {
+    "id": "b8dd14d5-49da-4872-8677-6e87828e7dfe",
+    "name": "章鱼小丸子",
+    "cuisine": "日料",
+    "category": "小吃",
+    "tags": [
+      "小吃",
+      "章鱼",
+      "油炸"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🐙",
+    "funText": "大阪街头的国民小吃",
+    "rarity": "common"
+  },
+  {
+    "id": "af3721f1-e755-4c4d-b6c7-0c4a1209f459",
+    "name": "日式咖喱饭",
+    "cuisine": "日料",
+    "category": "主食",
+    "tags": [
+      "咖喱",
+      "米饭",
+      "甜辣"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍛",
+    "funText": "日本国民料理，浓郁治愈",
+    "rarity": "common"
+  },
+  {
+    "id": "bc0a50e6-9af7-461a-930e-d97ba3225fb3",
+    "name": "牛丼饭",
+    "cuisine": "日料",
+    "category": "主食",
+    "tags": [
+      "牛肉",
+      "米饭",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥩",
+    "funText": "日本打工人的快乐源泉",
+    "rarity": "common"
+  },
+  {
+    "id": "3d0bbf02-e622-498b-9dda-6a6170b0c0b2",
+    "name": "烤鸡串",
+    "cuisine": "日料",
+    "category": "烧烤",
+    "tags": [
+      "烧烤",
+      "鸡肉",
+      "居酒屋"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍢",
+    "funText": "居酒屋标配，配啤酒绝了",
+    "rarity": "common"
+  },
+  {
+    "id": "7147e5b0-45bb-4e2a-b016-709282b0db50",
+    "name": "三文鱼刺身",
+    "cuisine": "日料",
+    "category": "热菜",
+    "tags": [
+      "生鱼",
+      "三文鱼",
+      "清淡"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🍣",
+    "funText": "橙色的浪漫，入口即化",
+    "rarity": "common"
+  },
+  {
+    "id": "885c9c1c-e822-42e3-9b89-5a570dbaa028",
+    "name": "日式炸猪排",
+    "cuisine": "日料",
+    "category": "热菜",
+    "tags": [
+      "猪排",
+      "油炸",
+      "定食"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥩",
+    "funText": "咔嚓一口，酥脆满分",
+    "rarity": "common"
+  },
+  {
+    "id": "979daa85-9bf6-4a36-8ecc-ba706f473ecb",
+    "name": "乌冬面",
+    "cuisine": "日料",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "汤面",
+      "弹牙"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍜",
+    "funText": "Q弹劲道的快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "19492443-d13c-4acc-852b-36aa88da04df",
+    "name": "寿喜烧",
+    "cuisine": "日料",
+    "category": "火锅",
+    "tags": [
+      "火锅",
+      "牛肉",
+      "甜酱油"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🫕",
+    "funText": "日式火锅的温柔乡",
+    "rarity": "rare"
+  },
+  {
+    "id": "fca2618e-2a47-4bb4-b7fc-714df427d37a",
+    "name": "抹茶甜品",
+    "cuisine": "日料",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "抹茶",
+      "下午茶"
+    ],
+    "scene": [
+      "下午茶",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍵",
+    "funText": "苦中带甜的日式哲学",
+    "rarity": "common"
+  },
+  {
+    "id": "61f6eb52-15e2-474c-8cd2-2ef9be7a74ff",
+    "name": "韩式烤肉",
+    "cuisine": "韩餐",
+    "category": "烧烤",
+    "tags": [
+      "烧烤",
+      "牛肉",
+      "包饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🥩",
+    "funText": "滋滋作响的幸福声",
+    "rarity": "rare"
+  },
+  {
+    "id": "c95b1029-15d1-4976-b463-7b3dd05907e5",
+    "name": "石锅拌饭",
+    "cuisine": "韩餐",
+    "category": "主食",
+    "tags": [
+      "米饭",
+      "石锅",
+      "拌饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍚",
+    "funText": "搅拌是对石锅拌饭最大的尊重",
+    "rarity": "common"
+  },
+  {
+    "id": "72790a04-7e32-40f8-9716-6deef876205e",
+    "name": "部队火锅",
+    "cuisine": "韩餐",
+    "category": "火锅",
+    "tags": [
+      "火锅",
+      "泡面",
+      "年糕",
+      "芝士"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🫕",
+    "funText": "什么都往锅里放的韩式浪漫",
+    "rarity": "common"
+  },
+  {
+    "id": "e29fbe39-4428-46e7-9bdc-067eb1b38e10",
+    "name": "泡菜炒饭",
+    "cuisine": "韩餐",
+    "category": "主食",
+    "tags": [
+      "米饭",
+      "泡菜",
+      "炒饭"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍳",
+    "funText": "泡菜拯救一切剩饭",
+    "rarity": "common"
+  },
+  {
+    "id": "2a6d3cbf-797d-490c-8de3-a4b11ece2d1b",
+    "name": "炸鸡啤酒",
+    "cuisine": "韩餐",
+    "category": "快餐",
+    "tags": [
+      "炸鸡",
+      "啤酒",
+      "夜宵"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "初雪配炸鸡，韩剧标配",
+    "rarity": "common"
+  },
+  {
+    "id": "63f27c7e-525a-416e-9b4f-2f0f607b96d9",
+    "name": "辣炒年糕",
+    "cuisine": "韩餐",
+    "category": "小吃",
+    "tags": [
+      "辣",
+      "年糕",
+      "甜辣"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍡",
+    "funText": "甜辣Q弹，停不下嘴",
+    "rarity": "common"
+  },
+  {
+    "id": "d9ffdfab-3a8f-4138-82ea-f9f9ebf7492d",
+    "name": "参鸡汤",
+    "cuisine": "韩餐",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "鸡肉",
+      "人参",
+      "滋补"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🍲",
+    "funText": "一整只鸡的大补汤",
+    "rarity": "rare"
+  },
+  {
+    "id": "e9f6a5f1-afbe-4c48-8cef-a0ff7f7fb4b7",
+    "name": "冷面",
+    "cuisine": "韩餐",
+    "category": "主食",
+    "tags": [
+      "冷面",
+      "酸甜",
+      "夏天"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍜",
+    "funText": "冰爽酸甜的夏日救星",
+    "rarity": "common"
+  },
+  {
+    "id": "48150ec2-0509-401e-af68-fb5b2b9ca7b0",
+    "name": "紫菜包饭",
+    "cuisine": "韩餐",
+    "category": "小吃",
+    "tags": [
+      "紫菜",
+      "米饭",
+      "便当"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍙",
+    "funText": "韩国版的寿司卷",
+    "rarity": "common"
+  },
+  {
+    "id": "5a856f8b-593c-4bd3-9ce4-d18d39ad6a5f",
+    "name": "韩式炸鸡",
+    "cuisine": "韩餐",
+    "category": "快餐",
+    "tags": [
+      "炸鸡",
+      "酱料",
+      "脆皮"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "双倍炸的双倍快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "ad2becb8-f35a-4f8b-b391-6e074180d546",
+    "name": "大酱汤",
+    "cuisine": "韩餐",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "大酱",
+      "豆腐",
+      "家常"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍲",
+    "funText": "韩国人的灵魂汤底",
+    "rarity": "common"
+  },
+  {
+    "id": "c7ae304e-dd44-4073-8895-00998f48c628",
+    "name": "芝士排骨",
+    "cuisine": "韩餐",
+    "category": "热菜",
+    "tags": [
+      "排骨",
+      "芝士",
+      "甜辣"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🧀",
+    "funText": "拉丝芝士配排骨，双倍满足",
+    "rarity": "rare"
+  },
+  {
+    "id": "d16a22a4-9be4-4f05-9639-330608e6abc3",
+    "name": "韩式拌面",
+    "cuisine": "韩餐",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "辣酱",
+      "拌"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍝",
+    "funText": "辣酱拌一切的韩式哲学",
+    "rarity": "common"
+  },
+  {
+    "id": "c3b718b6-bbe0-4255-b87f-58b45b3e8d1c",
+    "name": "猪蹄",
+    "cuisine": "韩餐",
+    "category": "小吃",
+    "tags": [
+      "猪蹄",
+      "卤味",
+      "胶原蛋白"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐷",
+    "funText": "满满胶原蛋白的幸福",
+    "rarity": "common"
+  },
+  {
+    "id": "24ae2703-be57-440e-a40e-b8f208381dad",
+    "name": "海鲜煎饼",
+    "cuisine": "韩餐",
+    "category": "小吃",
+    "tags": [
+      "煎饼",
+      "海鲜",
+      "小吃"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥞",
+    "funText": "外酥里嫩的海鲜饼",
+    "rarity": "common"
+  },
+  {
+    "id": "5ba16a48-c36a-4c4d-8f0c-68e23a38cc5d",
+    "name": "冬阴功汤",
+    "cuisine": "东南亚",
+    "category": "汤品",
+    "tags": [
+      "酸辣",
+      "汤",
+      "泰式",
+      "虾"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "酸辣鲜香四重暴击",
+    "rarity": "rare"
+  },
+  {
+    "id": "52b47568-2860-45df-9c23-4b3db54fc926",
+    "name": "泰式绿咖喱",
+    "cuisine": "东南亚",
+    "category": "热菜",
+    "tags": [
+      "咖喱",
+      "辣",
+      "椰奶",
+      "泰式"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍛",
+    "funText": "绿色的辣，意想不到",
+    "rarity": "common"
+  },
+  {
+    "id": "ed13201c-9038-4438-9a98-c189d9b3978c",
+    "name": "越南河粉",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "米粉",
+      "汤粉",
+      "牛肉",
+      "清淡"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍜",
+    "funText": "一碗清汤河粉的东南亚浪漫",
+    "rarity": "common"
+  },
+  {
+    "id": "936f4ca8-29ea-410a-93b6-0eacefdf9be4",
+    "name": "芒果糯米饭",
+    "cuisine": "东南亚",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "芒果",
+      "糯米",
+      "椰奶"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥭",
+    "funText": "泰国甜品天花板",
+    "rarity": "common"
+  },
+  {
+    "id": "290b9215-cfa5-4afb-b402-89d29c25e6f5",
+    "name": "海南鸡饭",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "鸡肉",
+      "米饭",
+      "清淡"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "新加坡的国菜，简单即巅峰",
+    "rarity": "common"
+  },
+  {
+    "id": "eb9efae1-0758-45d0-81ba-77a15ff80fd9",
+    "name": "沙嗲烤串",
+    "cuisine": "东南亚",
+    "category": "烧烤",
+    "tags": [
+      "烧烤",
+      "花生酱",
+      "鸡肉"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍢",
+    "funText": "花生酱是沙嗲的灵魂",
+    "rarity": "common"
+  },
+  {
+    "id": "44e8ccfa-bab1-4851-9497-760d41a190c8",
+    "name": "泰式炒河粉",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "河粉",
+      "炒",
+      "虾",
+      "花生"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍝",
+    "funText": "酸甜辣咸的完美平衡",
+    "rarity": "common"
+  },
+  {
+    "id": "27b23050-b85f-4222-9f5e-05884583a3d8",
+    "name": "椰浆饭",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "椰浆",
+      "米饭",
+      "参巴酱"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍚",
+    "funText": "马来西亚的国民早餐",
+    "rarity": "common"
+  },
+  {
+    "id": "42d9a349-dad0-4ed3-8fbe-d9ce3563b877",
+    "name": "叻沙",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "汤面",
+      "椰奶",
+      "辣",
+      "咖喱"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍜",
+    "funText": "浓郁到灵魂震颤的一碗面",
+    "rarity": "rare"
+  },
+  {
+    "id": "fda09537-29c7-4749-8257-9ceaca7ba29a",
+    "name": "菠萝炒饭",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "炒饭",
+      "菠萝",
+      "虾",
+      "咖喱"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍍",
+    "funText": "菠萝壳里的异域风情",
+    "rarity": "common"
+  },
+  {
+    "id": "1041857d-aa9b-430a-bbac-d64581ff859d",
+    "name": "越南春卷",
+    "cuisine": "东南亚",
+    "category": "小吃",
+    "tags": [
+      "春卷",
+      "蔬菜",
+      "清爽"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🌯",
+    "funText": "透明皮里的彩虹世界",
+    "rarity": "common"
+  },
+  {
+    "id": "2ea4b0b2-07c0-42b6-9c26-5eceeaa12f13",
+    "name": "印尼炒饭",
+    "cuisine": "东南亚",
+    "category": "主食",
+    "tags": [
+      "炒饭",
+      "甜酱油",
+      "虾片"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍳",
+    "funText": "炒饭上放个煎蛋就是仪式感",
+    "rarity": "common"
+  },
+  {
+    "id": "0f3b46eb-d558-4dac-a989-3aed571b3d25",
+    "name": "咖喱蟹",
+    "cuisine": "东南亚",
+    "category": "热菜",
+    "tags": [
+      "咖喱",
+      "蟹",
+      "辣"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🦀",
+    "funText": "螃蟹泡在咖喱里的终极享受",
+    "rarity": "legendary"
+  },
+  {
+    "id": "c95c846d-980d-4250-959d-d2d74328ce89",
+    "name": "青木瓜沙拉",
+    "cuisine": "东南亚",
+    "category": "凉菜",
+    "tags": [
+      "沙拉",
+      "酸辣",
+      "木瓜",
+      "清爽"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥗",
+    "funText": "酸辣爽口的泰式开胃菜",
+    "rarity": "common"
+  },
+  {
+    "id": "24a48ad4-f220-4622-befe-5230fc78e2c6",
+    "name": "肉骨茶",
+    "cuisine": "东南亚",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "排骨",
+      "药材",
+      "滋补"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "满满药材香的排骨汤",
+    "rarity": "common"
+  },
+  {
+    "id": "4c8c2e1a-05c7-4a9c-b216-efa59bc8f410",
+    "name": "牛排",
+    "cuisine": "西餐",
+    "category": "热菜",
+    "tags": [
+      "牛肉",
+      "煎",
+      "高档",
+      "约会"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🥩",
+    "funText": "五分熟是对牛排的基本尊重",
+    "rarity": "rare"
+  },
+  {
+    "id": "ded2d107-f4b2-4321-b7ba-23dde167309f",
+    "name": "意大利面",
+    "cuisine": "西餐",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "番茄",
+      "意式"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍝",
+    "funText": "阿尔丹特的弹牙快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "2b437254-6753-42b8-9360-65198560f3a8",
+    "name": "凯撒沙拉",
+    "cuisine": "西餐",
+    "category": "凉菜",
+    "tags": [
+      "沙拉",
+      "蔬菜",
+      "清淡",
+      "健康"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥗",
+    "funText": "减肥人士的灵魂伴侣",
+    "rarity": "common"
+  },
+  {
+    "id": "560f5f1b-566a-4cce-bf48-77a7988e5125",
+    "name": "奶油蘑菇汤",
+    "cuisine": "西餐",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "奶油",
+      "蘑菇"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍲",
+    "funText": "浓郁丝滑的液体拥抱",
+    "rarity": "common"
+  },
+  {
+    "id": "da1a614f-2fd7-4aca-9924-af998b385d48",
+    "name": "炸鱼薯条",
+    "cuisine": "西餐",
+    "category": "快餐",
+    "tags": [
+      "油炸",
+      "鱼",
+      "薯条",
+      "英式"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🐟",
+    "funText": "英国人唯一拿得出手的美食",
+    "rarity": "common"
+  },
+  {
+    "id": "5e2681b8-709e-4e49-afbb-e1313b9d1038",
+    "name": "法式焗蜗牛",
+    "cuisine": "西餐",
+    "category": "小吃",
+    "tags": [
+      "蜗牛",
+      "法式",
+      "黄油",
+      "蒜"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🐌",
+    "funText": "法式浪漫从一只蜗牛开始",
+    "rarity": "rare"
+  },
+  {
+    "id": "42796580-38c0-470a-af48-05f1ea27fed3",
+    "name": "烤羊排",
+    "cuisine": "西餐",
+    "category": "烧烤",
+    "tags": [
+      "羊排",
+      "烤",
+      "迷迭香"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🍖",
+    "funText": "迷迭香与羊排的法式恋爱",
+    "rarity": "rare"
+  },
+  {
+    "id": "bc17d692-f1ba-407f-858d-a6de36d297ce",
+    "name": "玛格丽特披萨",
+    "cuisine": "西餐",
+    "category": "快餐",
+    "tags": [
+      "披萨",
+      "芝士",
+      "番茄"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍕",
+    "funText": "番茄芝士罗勒，经典三色旗",
+    "rarity": "common"
+  },
+  {
+    "id": "2f69a824-49de-48a3-83d1-6a2f91f5ca49",
+    "name": "奶油培根意面",
+    "cuisine": "西餐",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "奶油",
+      "培根"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍝",
+    "funText": "碳水配脂肪的罪恶快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "c24ae328-112b-4f15-bc4b-9efa76e125f8",
+    "name": "牛肉汉堡",
+    "cuisine": "西餐",
+    "category": "快餐",
+    "tags": [
+      "汉堡",
+      "牛肉",
+      "芝士"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍔",
+    "funText": "双手捧着啃才是正确吃法",
+    "rarity": "common"
+  },
+  {
+    "id": "6a2d7cae-02ca-405b-81c5-3435df1625b9",
+    "name": "海鲜烩饭",
+    "cuisine": "西餐",
+    "category": "主食",
+    "tags": [
+      "海鲜",
+      "米饭",
+      "意式"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "high",
+    "emoji": "🦐",
+    "funText": "意式海鲜饭的浪漫",
+    "rarity": "rare"
+  },
+  {
+    "id": "1a796f2d-7598-4ba7-990e-1ef8819a7db9",
+    "name": "班尼迪克蛋",
+    "cuisine": "西餐",
+    "category": "小吃",
+    "tags": [
+      "鸡蛋",
+      "早午餐",
+      "荷兰酱"
+    ],
+    "scene": [
+      "下午茶",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🥚",
+    "funText": "Brunch的王者，戳破流心蛋",
+    "rarity": "common"
+  },
+  {
+    "id": "ebc75398-dee7-4ae7-983f-887060371101",
+    "name": "法式鹅肝",
+    "cuisine": "西餐",
+    "category": "小吃",
+    "tags": [
+      "鹅肝",
+      "法式",
+      "高档"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🍷",
+    "funText": "舌尖上的奢侈，入口即化",
+    "rarity": "legendary"
+  },
+  {
+    "id": "f8a034fd-06ff-440d-86dd-f98c2029a03a",
+    "name": "提拉米苏",
+    "cuisine": "西餐",
+    "category": "甜品",
+    "tags": [
+      "甜品",
+      "咖啡",
+      "芝士",
+      "意式"
+    ],
+    "scene": [
+      "下午茶",
+      "晚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍰",
+    "funText": "带我走吧——提拉米苏的告白",
+    "rarity": "common"
+  },
+  {
+    "id": "a284de4a-5a02-4833-9d15-beb33ecb337d",
+    "name": "烤鸡翅",
+    "cuisine": "西餐",
+    "category": "烧烤",
+    "tags": [
+      "鸡翅",
+      "烤",
+      "酱汁"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍗",
+    "funText": "没有人能对烤鸡翅说不",
+    "rarity": "common"
+  },
+  {
+    "id": "3437280f-ad29-483d-a721-1175006384cf",
+    "name": "麦辣鸡腿堡",
+    "cuisine": "快餐",
+    "category": "快餐",
+    "tags": [
+      "汉堡",
+      "鸡肉",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍔",
+    "funText": "打工人的快乐老家",
+    "rarity": "common"
+  },
+  {
+    "id": "bdcba846-a8f3-408e-843a-ca25b8c35a08",
+    "name": "黄焖鸡米饭",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "鸡肉",
+      "米饭",
+      "焖",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍗",
+    "funText": "中国快餐之光，干饭标配",
+    "rarity": "common"
+  },
+  {
+    "id": "89e19ce0-ab4d-41d0-8f62-0ba0c212644d",
+    "name": "沙县小吃拌面",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "拌面",
+      "花生酱",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "沙县拌面加蒸饺是yyds",
+    "rarity": "common"
+  },
+  {
+    "id": "3fbaaa17-1fb1-494a-8ba4-4c876d4c605a",
+    "name": "快餐炒饭",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "炒饭",
+      "蛋",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍳",
+    "funText": "蛋炒饭也是一门学问",
+    "rarity": "common"
+  },
+  {
+    "id": "66358e80-758c-40e2-a8ae-ccd7da0fa12b",
+    "name": "炸鸡套餐",
+    "cuisine": "快餐",
+    "category": "快餐",
+    "tags": [
+      "炸鸡",
+      "快餐",
+      "套餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍗",
+    "funText": "卡路里是快乐的单位",
+    "rarity": "common"
+  },
+  {
+    "id": "f4bb74fe-d971-4d7f-acce-85d73c5a8b93",
+    "name": "煎饼果子",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "煎饼",
+      "鸡蛋",
+      "早餐"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🫓",
+    "funText": "天津人的早餐信仰",
+    "rarity": "common"
+  },
+  {
+    "id": "98406a9a-955d-4826-899b-afba0572b734",
+    "name": "手抓饼",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "饼",
+      "鸡蛋",
+      "早餐"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🫓",
+    "funText": "层层酥脆的手撕快乐",
+    "rarity": "common"
+  },
+  {
+    "id": "4f5b6947-e9f1-44e4-97fa-88fd7961768f",
+    "name": "鸡蛋灌饼",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "饼",
+      "鸡蛋",
+      "早餐"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥞",
+    "funText": "鼓起的瞬间就是幸福",
+    "rarity": "common"
+  },
+  {
+    "id": "9c30c3be-a212-4ff0-b17a-c050e88315b7",
+    "name": "麻辣烫",
+    "cuisine": "快餐",
+    "category": "火锅",
+    "tags": [
+      "辣",
+      "蔬菜",
+      "汤",
+      "一人食"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍲",
+    "funText": "一个人的火锅叫麻辣烫",
+    "rarity": "common"
+  },
+  {
+    "id": "7f3e4c8b-f9e8-4ce8-8830-05efa1d56ee1",
+    "name": "过桥米线",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "米线",
+      "汤",
+      "云南"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "传说中为爱过桥的米线",
+    "rarity": "common"
+  },
+  {
+    "id": "a02001f5-6dec-458b-8e64-496657b4333a",
+    "name": "烤肉拌饭",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "烤肉",
+      "米饭",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥩",
+    "funText": "便宜大碗的干饭神器",
+    "rarity": "common"
+  },
+  {
+    "id": "da00c52f-a5e1-4da6-8c48-f322b511cf0f",
+    "name": "鸭血粉丝汤",
+    "cuisine": "快餐",
+    "category": "汤品",
+    "tags": [
+      "鸭血",
+      "粉丝",
+      "汤",
+      "南京"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍲",
+    "funText": "南京的城市味道",
+    "rarity": "common"
+  },
+  {
+    "id": "ee682434-642d-4176-9bd0-d950766ab742",
+    "name": "热干面",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "芝麻酱",
+      "武汉"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "过早的灵魂，武汉人的命",
+    "rarity": "common"
+  },
+  {
+    "id": "a51e57fe-a806-4fbe-8550-497cd557342a",
+    "name": "驴肉火烧",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "驴肉",
+      "火烧",
+      "河北"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥙",
+    "funText": "天上龙肉，地下驴肉",
+    "rarity": "common"
+  },
+  {
+    "id": "24bbfcf9-0749-4873-9b97-dcc82dd23e37",
+    "name": "重庆小面",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "辣",
+      "重庆"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "重庆人的清晨从一碗小面开始",
+    "rarity": "common"
+  },
+  {
+    "id": "90ea9eb5-0e15-4aee-812e-63f321989694",
+    "name": "螺蛳粉",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "米粉",
+      "臭",
+      "螺蛳",
+      "酸辣"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "闻着上头，吃着更上头",
+    "rarity": "rare"
+  },
+  {
+    "id": "36455c70-7a46-45de-b5e5-93651a888b0b",
+    "name": "肉夹馍套餐",
+    "cuisine": "快餐",
+    "category": "套餐",
+    "tags": [
+      "肉夹馍",
+      "凉皮",
+      "冰峰"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥙",
+    "funText": "三秦套餐，陕西人的标配",
+    "rarity": "common"
+  },
+  {
+    "id": "3b579a8c-0a00-4a4a-9f21-7bc019c07085",
+    "name": "佛跳墙",
+    "cuisine": "粤菜",
+    "category": "汤品",
+    "tags": [
+      "汤",
+      "海参",
+      "鲍鱼",
+      "高档",
+      "滋补"
+    ],
+    "scene": [
+      "晚餐"
+    ],
+    "priceRange": "luxury",
+    "emoji": "🏺",
+    "funText": "佛都要翻墙来喝的汤",
+    "rarity": "legendary"
+  },
+  {
+    "id": "aed21a20-9f36-41ef-8819-6c4d35545c47",
+    "name": "血鸭",
+    "cuisine": "湘菜",
+    "category": "热菜",
+    "tags": [
+      "辣",
+      "鸭",
+      "血",
+      "重口"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🦆",
+    "funText": "湘西名菜，越吃越上瘾",
+    "rarity": "rare"
+  },
+  {
+    "id": "8e6ee4dc-6822-4327-baf8-61d412daf99a",
+    "name": "酸辣粉",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "酸辣",
+      "粉丝",
+      "快餐"
+    ],
+    "scene": [
+      "午餐",
+      "夜宵",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "酸到皱眉辣到流泪还想吃",
+    "rarity": "common"
+  },
+  {
+    "id": "84680512-ddb4-4e89-bc6d-8b9e0ab3fc77",
+    "name": "炸酱面",
+    "cuisine": "快餐",
+    "category": "主食",
+    "tags": [
+      "面条",
+      "肉酱",
+      "北京"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍜",
+    "funText": "老北京的灵魂面条",
+    "rarity": "common"
+  },
+  {
+    "id": "8b50a02c-103c-4c55-aee4-428cc01c66e2",
+    "name": "糖醋排骨",
+    "cuisine": "粤菜",
+    "category": "热菜",
+    "tags": [
+      "酸甜",
+      "排骨",
+      "经典"
+    ],
+    "scene": [
+      "午餐",
+      "晚餐",
+      "聚餐"
+    ],
+    "priceRange": "mid",
+    "emoji": "🍖",
+    "funText": "老少通杀的下饭硬菜",
+    "rarity": "common"
+  },
+  {
+    "id": "bfbdc9a2-8d53-4900-afb2-139289c98cf0",
+    "name": "烤红薯",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "红薯",
+      "烤",
+      "冬天",
+      "街头"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🍠",
+    "funText": "冬天捧着烤红薯就是幸福",
+    "rarity": "common"
+  },
+  {
+    "id": "e01b4c8c-9066-4908-8e39-6c73d142808d",
+    "name": "豆花",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "豆花",
+      "甜咸",
+      "经典"
+    ],
+    "scene": [
+      "下午茶",
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🥣",
+    "funText": "甜咸之争，千年难解",
+    "rarity": "common"
+  },
+  {
+    "id": "edeaeec5-fcc6-4e31-866c-52fb44615d2e",
+    "name": "葱油饼",
+    "cuisine": "快餐",
+    "category": "小吃",
+    "tags": [
+      "饼",
+      "葱油",
+      "早餐",
+      "酥脆"
+    ],
+    "scene": [
+      "午餐",
+      "早餐",
+      "晚餐"
+    ],
+    "priceRange": "budget",
+    "emoji": "🫓",
+    "funText": "层层酥脆，葱香四溢",
+    "rarity": "common"
+  }
+]

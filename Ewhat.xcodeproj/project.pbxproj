@@ -95,7 +95,7 @@
 				CC00000100000000000004 /* Models */,
 				CC00000100000000000005 /* ViewModels */,
 				CC00000100000000000006 /* Views */,
-				CC00000100000000000012 /* Data */,
+				CC00000100000000000012 /* Resources */,
 				CC00000100000000000013 /* Utils */,
 				CC00000100000000000015 /* Theme */,
 				BB00000100000000000028 /* Assets.xcassets */,
@@ -191,12 +191,12 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		CC00000100000000000012 /* Data */ = {
+		CC00000100000000000012 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				BB00000100000000000027 /* foods.json */,
 			);
-			path = Data;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CC00000100000000000013 /* Utils */ = {

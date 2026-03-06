@@ -3,17 +3,17 @@ import Foundation
 // MARK: - 菜系 Cuisine
 
 enum Cuisine: String, Codable, CaseIterable, Identifiable {
-    case sichuan    = "川菜"
-    case cantonese  = "粤菜"
-    case hunan      = "湘菜"
-    case northeastern = "东北菜"
-    case jiangzhe   = "江浙菜"
-    case northwestern = "西北菜"
-    case japanese   = "日料"
-    case korean     = "韩餐"
+    case sichuan       = "川菜"
+    case cantonese     = "粤菜"
+    case hunan         = "湘菜"
+    case northeastern  = "东北菜"
+    case jiangzhe      = "江浙菜"
+    case northwestern  = "西北菜"
+    case japanese      = "日料"
+    case korean        = "韩餐"
     case southeastAsian = "东南亚"
-    case western    = "西餐"
-    case fastFood   = "快餐"
+    case western       = "西餐"
+    case fastFood      = "快餐"
 
     var id: String { rawValue }
 
@@ -54,19 +54,16 @@ enum Cuisine: String, Codable, CaseIterable, Identifiable {
 // MARK: - 食物类别 FoodType
 
 enum FoodType: String, Codable, CaseIterable, Identifiable {
-    case hotpot      = "火锅"
-    case noodles     = "面条"
-    case rice        = "米饭"
-    case dumplings   = "饺子包子"
-    case bbq         = "烧烤"
-    case stirFry     = "炒菜"
-    case soup        = "汤/粥"
-    case snack       = "小吃"
-    case dessert     = "甜品"
-    case salad       = "沙拉"
-    case seafood     = "海鲜"
-    case fastMeal    = "快餐简餐"
-    case setMeal     = "定食套餐"
+    case hotDish   = "热菜"
+    case staple    = "主食"
+    case snack     = "小吃"
+    case soup      = "汤品"
+    case hotpot    = "火锅"
+    case dessert   = "甜品"
+    case bbq       = "烧烤"
+    case fastMeal  = "快餐"
+    case coldDish  = "凉菜"
+    case setMeal   = "套餐"
 
     var id: String { rawValue }
 }
@@ -74,21 +71,23 @@ enum FoodType: String, Codable, CaseIterable, Identifiable {
 // MARK: - 用餐场景 Scene
 
 enum DiningScene: String, Codable, CaseIterable, Identifiable {
-    case solo       = "一个人随便吃"
-    case friends    = "朋友聚餐"
-    case date       = "约会"
-    case lateNight  = "夜宵"
-    case afternoon  = "下午茶"
+    case lunch     = "午餐"
+    case dinner    = "晚餐"
+    case gathering = "聚餐"
+    case lateNight = "夜宵"
+    case afternoon = "下午茶"
+    case breakfast = "早餐"
 
     var id: String { rawValue }
 
     var emoji: String {
         switch self {
-        case .solo:      return "🧑"
-        case .friends:   return "👯"
-        case .date:      return "💑"
+        case .lunch:     return "🍱"
+        case .dinner:    return "🍽️"
+        case .gathering: return "👯"
         case .lateNight: return "🌙"
         case .afternoon: return "☕"
+        case .breakfast: return "🌅"
         }
     }
 }
@@ -96,18 +95,18 @@ enum DiningScene: String, Codable, CaseIterable, Identifiable {
 // MARK: - 价格区间 PriceRange
 
 enum PriceRange: String, Codable, CaseIterable, Identifiable {
-    case budget   = "穷鬼模式"     // < ¥20
-    case normal   = "正常"         // ¥20-50
-    case premium  = "小奢侈"       // ¥50-100
-    case luxury   = "随便花"        // > ¥100
+    case budget  = "budget"    // < ¥20
+    case mid     = "mid"       // ¥20-50
+    case high    = "high"      // ¥50-100
+    case luxury  = "luxury"    // > ¥100
 
     var id: String { rawValue }
 
     var emoji: String {
         switch self {
         case .budget:  return "💰"
-        case .normal:  return "💵"
-        case .premium: return "💎"
+        case .mid:     return "💵"
+        case .high:    return "💎"
         case .luxury:  return "👑"
         }
     }
@@ -115,8 +114,17 @@ enum PriceRange: String, Codable, CaseIterable, Identifiable {
     var displayText: String {
         switch self {
         case .budget:  return "< ¥20"
-        case .normal:  return "¥20-50"
-        case .premium: return "¥50-100"
+        case .mid:     return "¥20-50"
+        case .high:    return "¥50-100"
+        case .luxury:  return "随便花"
+        }
+    }
+
+    var displayName: String {
+        switch self {
+        case .budget:  return "穷鬼模式"
+        case .mid:     return "正常"
+        case .high:    return "小奢侈"
         case .luxury:  return "随便花"
         }
     }
@@ -125,15 +133,23 @@ enum PriceRange: String, Codable, CaseIterable, Identifiable {
 // MARK: - 卡牌稀有度 CardRarity
 
 enum CardRarity: String, Codable, CaseIterable {
-    case common    = "普通"
-    case rare      = "稀有"
-    case legendary = "传说"
+    case common    = "common"
+    case rare      = "rare"
+    case legendary = "legendary"
 
     var starCount: Int {
         switch self {
         case .common:    return 1
         case .rare:      return 2
         case .legendary: return 3
+        }
+    }
+
+    var displayName: String {
+        switch self {
+        case .common:    return "普通"
+        case .rare:      return "稀有"
+        case .legendary: return "传说"
         }
     }
 

@@ -1,8 +1,7 @@
 import Foundation
 
 struct Food: Codable, Identifiable, Hashable {
-    var id: String { name }
-
+    let id: String
     let name: String
     let cuisine: Cuisine
     let category: FoodType
