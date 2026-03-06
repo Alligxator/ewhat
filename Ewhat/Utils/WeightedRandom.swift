@@ -4,10 +4,6 @@ import Foundation
 enum WeightedRandom {
 
     /// 加权随机选择单个元素
-    /// - Parameters:
-    ///   - items: 候选项数组
-    ///   - weights: 对应权重数组（长度需与 items 一致）
-    /// - Returns: 被选中的元素，如果数组为空则返回 nil
     static func select<T>(from items: [T], weights: [Double]) -> T? {
         guard !items.isEmpty, items.count == weights.count else { return nil }
 
@@ -33,17 +29,11 @@ enum WeightedRandom {
     }
 
     /// 从食物列表中按权重选择，考虑多种因素
-    /// - Parameters:
-    ///   - foods: 候选食物列表
-    ///   - recentFoods: 最近吃过的食物名称（用于去重降权）
-    ///   - favoriteCuisines: 偏好菜系（用于加权）
-    ///   - fortuneAttributes: 今日食运推荐属性（用于加权）
-    ///   - fortuneEnabled: 是否启用食运加成
-    /// - Returns: 选中的食物
     static func selectFood(
         from foods: [Food],
         recentFoods: [String] = [],
         favoriteCuisines: [Cuisine] = [],
+        favoriteTags: [String] = [],
         fortuneAttributes: [String] = [],
         fortuneEnabled: Bool = true
     ) -> Food? {
@@ -54,6 +44,7 @@ enum WeightedRandom {
                 for: food,
                 recentFoods: recentFoods,
                 favoriteCuisines: favoriteCuisines,
+                favoriteTags: favoriteTags,
                 fortuneAttributes: fortuneAttributes,
                 fortuneEnabled: fortuneEnabled
             )
@@ -69,6 +60,7 @@ enum WeightedRandom {
         for food: Food,
         recentFoods: [String],
         favoriteCuisines: [Cuisine],
+        favoriteTags: [String] = [],
         fortuneAttributes: [String],
         fortuneEnabled: Bool
     ) -> Double {
@@ -81,12 +73,11 @@ enum WeightedRandom {
         case .legendary: weight *= 0.2
         }
 
-        // 2) 最近吃过降权
-        if recentFoods.contains(food.name) {
-            let recency = recentFoods.firstIndex(of: food.name)!
-            // 越近期吃过，降权越多
-            let penalty = max(0.1, 1.0 - Double(recentFoods.count - recency) * 0.15)
-            weight *= penalty
+        // 2) 最近吃过降权 — 越近期吃的降权越狠
+        if let idx = recentFoods.firstIndex(of: food.name) {
+            // idx == 0 表示最近刚吃过，降权最多
+            let recencyPenalty = max(0.05, 1.0 - Double(recentFoods.count - idx) * 0.12)
+            weight *= recencyPenalty
         }
 
         // 3) 偏好菜系加权
@@ -94,8 +85,18 @@ enum WeightedRandom {
             weight *= 1.5
         }
 
-        // 4) 食运加成
-        if fortuneEnabled {
+        // 4) 偏好标签加权
+        if !favoriteTags.isEmpty {
+            let tagMatchCount = food.tags.filter { tag in
+                favoriteTags.contains { fav in tag.contains(fav) }
+            }.count
+            if tagMatchCount > 0 {
+                weight *= (1.0 + Double(tagMatchCount) * 0.25)
+            }
+        }
+
+        // 5) 食运加成
+        if fortuneEnabled, !fortuneAttributes.isEmpty {
             let matchCount = food.tags.filter { tag in
                 fortuneAttributes.contains { attr in tag.contains(attr) }
             }.count
@@ -105,35 +106,5 @@ enum WeightedRandom {
         }
 
         return max(weight, 0.01) // 保证最低权重
-    }
-}
-
-// MARK: - 洗牌扩展
-
-extension Array {
-    /// Fisher-Yates 洗牌
-    func shuffledWeighted(by weights: [Double]) -> [Element] {
-        guard count == weights.count, !isEmpty else { return self }
-
-        var result: [Element] = []
-        var remaining = Array(zip(self, weights))
-
-        while !remaining.isEmpty {
-            if let selected = WeightedRandom.select(
-                from: remaining.map(\.0),
-                weights: remaining.map(\.1)
-            ) {
-                result.append(selected)
-                if let idx = remaining.firstIndex(where: { ($0.0 as AnyObject) === (selected as AnyObject) }) {
-                    remaining.remove(at: idx)
-                } else {
-                    remaining.removeFirst()
-                }
-            } else {
-                break
-            }
-        }
-
-        return result
     }
 }

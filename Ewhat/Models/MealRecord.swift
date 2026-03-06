@@ -44,14 +44,17 @@ final class MealRecord {
 final class UserPreference {
     var id: UUID
 
-    /// 黑名单食物名称
+    /// 永久黑名单食物名称
     var blacklistedFoods: [String]
 
-    /// 黑名单菜系 rawValue
+    /// 永久黑名单菜系 rawValue
     var blacklistedCuisines: [String]
 
     /// 偏好加权菜系 rawValue
     var favoriteCuisines: [String]
+
+    /// 偏好加权标签（如 "辣"、"海鲜"）
+    var favoriteTags: [String]
 
     /// 是否启用食运影响推荐
     var fortuneEnabled: Bool
@@ -67,9 +70,83 @@ final class UserPreference {
         self.blacklistedFoods = []
         self.blacklistedCuisines = []
         self.favoriteCuisines = []
+        self.favoriteTags = []
         self.fortuneEnabled = true
         self.hapticsEnabled = true
         self.soundEnabled = true
+    }
+
+    // MARK: - 便捷方法
+
+    /// 黑名单食物集合
+    var blacklistSet: Set<String> {
+        Set(blacklistedFoods)
+    }
+
+    /// 偏好菜系枚举列表
+    var favoriteCuisineEnums: [Cuisine] {
+        favoriteCuisines.compactMap { Cuisine(rawValue: $0) }
+    }
+
+    /// 黑名单菜系枚举列表
+    var blacklistedCuisineEnums: [Cuisine] {
+        blacklistedCuisines.compactMap { Cuisine(rawValue: $0) }
+    }
+
+    // MARK: - 黑名单管理
+
+    func addToBlacklist(_ foodName: String) {
+        guard !blacklistedFoods.contains(foodName) else { return }
+        blacklistedFoods.append(foodName)
+    }
+
+    func removeFromBlacklist(_ foodName: String) {
+        blacklistedFoods.removeAll { $0 == foodName }
+    }
+
+    func isBlacklisted(_ foodName: String) -> Bool {
+        blacklistedFoods.contains(foodName)
+    }
+
+    // MARK: - 菜系黑名单
+
+    func blacklistCuisine(_ cuisine: Cuisine) {
+        let raw = cuisine.rawValue
+        guard !blacklistedCuisines.contains(raw) else { return }
+        blacklistedCuisines.append(raw)
+    }
+
+    func unblacklistCuisine(_ cuisine: Cuisine) {
+        blacklistedCuisines.removeAll { $0 == cuisine.rawValue }
+    }
+
+    // MARK: - 偏好加权
+
+    func addFavoriteCuisine(_ cuisine: Cuisine) {
+        let raw = cuisine.rawValue
+        guard !favoriteCuisines.contains(raw) else { return }
+        favoriteCuisines.append(raw)
+    }
+
+    func removeFavoriteCuisine(_ cuisine: Cuisine) {
+        favoriteCuisines.removeAll { $0 == cuisine.rawValue }
+    }
+
+    func toggleFavoriteCuisine(_ cuisine: Cuisine) {
+        if favoriteCuisines.contains(cuisine.rawValue) {
+            removeFavoriteCuisine(cuisine)
+        } else {
+            addFavoriteCuisine(cuisine)
+        }
+    }
+
+    func addFavoriteTag(_ tag: String) {
+        guard !favoriteTags.contains(tag) else { return }
+        favoriteTags.append(tag)
+    }
+
+    func removeFavoriteTag(_ tag: String) {
+        favoriteTags.removeAll { $0 == tag }
     }
 }
 
