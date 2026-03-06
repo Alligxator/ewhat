@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA00000100000000000001 /* WhatToEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000001; };
+		AA00000100000000000002 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000002; };
+		AA00000100000000000003 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000003; };
+		AA00000100000000000004 /* DailyFortune.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000004; };
+		AA00000100000000000005 /* MealRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000005; };
+		AA00000100000000000006 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000006; };
+		AA00000100000000000007 /* FortuneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000007; };
+		AA00000100000000000008 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000008; };
+		AA00000100000000000009 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000009; };
+		AA00000100000000000010 /* FortuneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000010; };
+		AA00000100000000000011 /* DrawCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000011; };
+		AA00000100000000000012 /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000012; };
+		AA00000100000000000013 /* CardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000013; };
+		AA00000100000000000014 /* CardResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000014; };
+		AA00000100000000000015 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000015; };
+		AA00000100000000000016 /* TagFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000016; };
+		AA00000100000000000017 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000017; };
+		AA00000100000000000018 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000018; };
+		AA00000100000000000019 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000019; };
+		AA00000100000000000020 /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000020; };
+		AA00000100000000000021 /* LunarCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000021; };
+		AA00000100000000000022 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000022; };
+		AA00000100000000000023 /* WeightedRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000023; };
+		AA00000100000000000024 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000024; };
+		AA00000100000000000025 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000025; };
+		AA00000100000000000026 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000026; };
+		AA00000100000000000027 /* foods.json in Resources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000027; };
+		AA00000100000000000028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB00000100000000000028; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB00000100000000000001 /* WhatToEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToEatApp.swift; sourceTree = "<group>"; };
+		BB00000100000000000002 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		BB00000100000000000003 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		BB00000100000000000004 /* DailyFortune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFortune.swift; sourceTree = "<group>"; };
+		BB00000100000000000005 /* MealRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecord.swift; sourceTree = "<group>"; };
+		BB00000100000000000006 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		BB00000100000000000007 /* FortuneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneViewModel.swift; sourceTree = "<group>"; };
+		BB00000100000000000008 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
+		BB00000100000000000009 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BB00000100000000000010 /* FortuneCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCardView.swift; sourceTree = "<group>"; };
+		BB00000100000000000011 /* DrawCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCardButton.swift; sourceTree = "<group>"; };
+		BB00000100000000000012 /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
+		BB00000100000000000013 /* CardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipView.swift; sourceTree = "<group>"; };
+		BB00000100000000000014 /* CardResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardResultView.swift; sourceTree = "<group>"; };
+		BB00000100000000000015 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		BB00000100000000000016 /* TagFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
+		BB00000100000000000017 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		BB00000100000000000018 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		BB00000100000000000019 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB00000100000000000020 /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
+		BB00000100000000000021 /* LunarCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarCalendar.swift; sourceTree = "<group>"; };
+		BB00000100000000000022 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		BB00000100000000000023 /* WeightedRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedRandom.swift; sourceTree = "<group>"; };
+		BB00000100000000000024 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BB00000100000000000025 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		BB00000100000000000026 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		BB00000100000000000027 /* foods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foods.json; sourceTree = "<group>"; };
+		BB00000100000000000028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB00000100000000000029 /* Ewhat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ewhat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD00000100000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC00000100000000000001 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CC00000100000000000002 /* Ewhat */,
+				CC00000100000000000014 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC00000100000000000002 /* Ewhat */ = {
+			isa = PBXGroup;
+			children = (
+				CC00000100000000000003 /* App */,
+				CC00000100000000000004 /* Models */,
+				CC00000100000000000005 /* ViewModels */,
+				CC00000100000000000006 /* Views */,
+				CC00000100000000000012 /* Data */,
+				CC00000100000000000013 /* Utils */,
+				CC00000100000000000015 /* Theme */,
+				BB00000100000000000028 /* Assets.xcassets */,
+			);
+			path = Ewhat;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000001 /* WhatToEatApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000002 /* Food.swift */,
+				BB00000100000000000003 /* FoodCategory.swift */,
+				BB00000100000000000004 /* DailyFortune.swift */,
+				BB00000100000000000005 /* MealRecord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000005 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000006 /* CardViewModel.swift */,
+				BB00000100000000000007 /* FortuneViewModel.swift */,
+				BB00000100000000000008 /* RecordViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC00000100000000000007 /* Home */,
+				CC00000100000000000008 /* Card */,
+				CC00000100000000000009 /* Filter */,
+				CC00000100000000000010 /* Record */,
+				CC00000100000000000011 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000007 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000009 /* HomeView.swift */,
+				BB00000100000000000010 /* FortuneCardView.swift */,
+				BB00000100000000000011 /* DrawCardButton.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000008 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000012 /* FoodCardView.swift */,
+				BB00000100000000000013 /* CardFlipView.swift */,
+				BB00000100000000000014 /* CardResultView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000009 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000015 /* FilterView.swift */,
+				BB00000100000000000016 /* TagFlowLayout.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000010 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000017 /* RecordView.swift */,
+				BB00000100000000000018 /* StatsView.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000011 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000019 /* SettingsView.swift */,
+				BB00000100000000000020 /* BlacklistView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000012 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000027 /* foods.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000013 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000021 /* LunarCalendar.swift */,
+				BB00000100000000000022 /* HapticsManager.swift */,
+				BB00000100000000000023 /* WeightedRandom.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000014 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000029 /* Ewhat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC00000100000000000015 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BB00000100000000000024 /* Colors.swift */,
+				BB00000100000000000025 /* Fonts.swift */,
+				BB00000100000000000026 /* Animations.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE00000100000000000001 /* Ewhat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF00000100000000000002 /* Build configuration list for PBXNativeTarget "Ewhat" */;
+			buildPhases = (
+				DD00000100000000000002 /* Sources */,
+				DD00000100000000000001 /* Frameworks */,
+				DD00000100000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ewhat;
+			productName = Ewhat;
+			productReference = BB00000100000000000029 /* Ewhat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA00000100000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					EE00000100000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = FF00000100000000000001 /* Build configuration list for PBXProject "Ewhat" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+				Base,
+			);
+			mainGroup = CC00000100000000000001 /* Root */;
+			productRefGroup = CC00000100000000000014 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE00000100000000000001 /* Ewhat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD00000100000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA00000100000000000027 /* foods.json in Resources */,
+				AA00000100000000000028 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD00000100000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA00000100000000000001 /* WhatToEatApp.swift in Sources */,
+				AA00000100000000000002 /* Food.swift in Sources */,
+				AA00000100000000000003 /* FoodCategory.swift in Sources */,
+				AA00000100000000000004 /* DailyFortune.swift in Sources */,
+				AA00000100000000000005 /* MealRecord.swift in Sources */,
+				AA00000100000000000006 /* CardViewModel.swift in Sources */,
+				AA00000100000000000007 /* FortuneViewModel.swift in Sources */,
+				AA00000100000000000008 /* RecordViewModel.swift in Sources */,
+				AA00000100000000000009 /* HomeView.swift in Sources */,
+				AA00000100000000000010 /* FortuneCardView.swift in Sources */,
+				AA00000100000000000011 /* DrawCardButton.swift in Sources */,
+				AA00000100000000000012 /* FoodCardView.swift in Sources */,
+				AA00000100000000000013 /* CardFlipView.swift in Sources */,
+				AA00000100000000000014 /* CardResultView.swift in Sources */,
+				AA00000100000000000015 /* FilterView.swift in Sources */,
+				AA00000100000000000016 /* TagFlowLayout.swift in Sources */,
+				AA00000100000000000017 /* RecordView.swift in Sources */,
+				AA00000100000000000018 /* StatsView.swift in Sources */,
+				AA00000100000000000019 /* SettingsView.swift in Sources */,
+				AA00000100000000000020 /* BlacklistView.swift in Sources */,
+				AA00000100000000000021 /* LunarCalendar.swift in Sources */,
+				AA00000100000000000022 /* HapticsManager.swift in Sources */,
+				AA00000100000000000023 /* WeightedRandom.swift in Sources */,
+				AA00000100000000000024 /* Colors.swift in Sources */,
+				AA00000100000000000025 /* Fonts.swift in Sources */,
+				AA00000100000000000026 /* Animations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		GG00000100000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		GG00000100000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		GG00000100000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "今天吃什么";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ewhat.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		GG00000100000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "今天吃什么";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ewhat.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF00000100000000000001 /* Build configuration list for PBXProject "Ewhat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				GG00000100000000000001 /* Debug */,
+				GG00000100000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF00000100000000000002 /* Build configuration list for PBXNativeTarget "Ewhat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				GG00000100000000000003 /* Debug */,
+				GG00000100000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA00000100000000000001 /* Project object */;
+}
