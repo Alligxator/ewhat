@@ -1,47 +1,235 @@
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
     @State private var cardVM = CardViewModel()
     @State private var fortuneVM = FortuneViewModel()
+    @State private var recordVM = RecordViewModel()
     @State private var selectedTab = 0
+    @State private var showFilter = false
+    @State private var showCardResult = false
+    @Environment(\.modelContext) private var modelContext
+    @Query private var preferences: [UserPreference]
+
+    private var pref: UserPreference { preferences.first ?? UserPreference() }
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            // 首页 — 今日食运 + 抽卡入口
+            // ── 首页 ──
             NavigationStack {
-                VStack {
-                    Text("今天吃什么")
-                        .font(.largeTitle.bold())
-                    Spacer()
-                }
-                .navigationTitle("Ewhat")
+                mainPage
+                    .navigationTitle("")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text("Ewhat")
+                                .font(AppFonts.pageTitle)
+                                .foregroundStyle(AppColors.warmOrange)
+                        }
+                    }
+                    .sheet(isPresented: $showFilter) {
+                        NavigationStack {
+                            FilterView(cardVM: cardVM) {
+                                showFilter = false
+                                startDraw()
+                            }
+                        }
+                        .presentationDetents([.large])
+                    }
+                    .fullScreenCover(isPresented: $showCardResult) {
+                        cardResultSheet
+                    }
             }
-            .tabItem {
-                Label("首页", systemImage: "house.fill")
-            }
+            .tabItem { Label("首页", systemImage: "house.fill") }
             .tag(0)
 
-            // 记录页
+            // ── 记录 ──
             NavigationStack {
                 RecordView()
             }
-            .tabItem {
-                Label("记录", systemImage: "calendar")
-            }
+            .tabItem { Label("记录", systemImage: "calendar") }
             .tag(1)
 
-            // 设置页
+            // ── 设置 ──
             NavigationStack {
                 SettingsView()
             }
-            .tabItem {
-                Label("设置", systemImage: "gearshape.fill")
-            }
+            .tabItem { Label("设置", systemImage: "gearshape.fill") }
             .tag(2)
+        }
+        .tint(AppColors.warmOrange)
+        .onAppear {
+            recordVM.modelContext = modelContext
+            recordVM.refreshAll()
+            cardVM.setRecentFoods(recordVM.recentFoodNames())
+        }
+    }
+
+    // MARK: - 首页内容
+
+    private var mainPage: some View {
+        ScrollView {
+            VStack(spacing: AppLayout.sectionSpacing) {
+                // 食运卡片
+                if let fortune = fortuneVM.todayFortune {
+                    FortuneCardView(fortune: fortune)
+                        .padding(.horizontal, AppLayout.pagePadding)
+                }
+
+                // 筛选摘要
+                if cardVM.hasActiveFilters {
+                    HStack {
+                        Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                            .foregroundStyle(AppColors.warmOrange)
+                        Text(cardVM.filterSummary)
+                            .font(AppFonts.caption)
+                            .foregroundStyle(.secondary)
+                        Spacer()
+                        Button("清除") { cardVM.resetFilters() }
+                            .font(AppFonts.captionBold)
+                            .foregroundStyle(AppColors.warmCoral)
+                    }
+                    .padding(.horizontal, AppLayout.pagePadding)
+                }
+
+                // 抽卡区域
+                VStack(spacing: 16) {
+                    // 卡牌背面（待翻转）
+                    CardBackView()
+                        .padding(.horizontal, AppLayout.pagePadding)
+                        .onLongPressGesture(minimumDuration: 0.3) {
+                            if pref.hapticsEnabled { HapticsManager.longPress() }
+                            startDraw()
+                        }
+
+                    // 按钮行
+                    HStack(spacing: 12) {
+                        Button {
+                            showFilter = true
+                        } label: {
+                            Label("筛选", systemImage: "slider.horizontal.3")
+                                .font(AppFonts.bodyMedium)
+                                .foregroundStyle(AppColors.warmBrown)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 14)
+                                .background(
+                                    RoundedRectangle(cornerRadius: AppLayout.smallCorner, style: .continuous)
+                                        .fill(AppColors.warmCream)
+                                )
+                        }
+
+                        DrawCardButton {
+                            startDraw()
+                        }
+                    }
+                    .padding(.horizontal, AppLayout.pagePadding)
+                }
+
+                // 今日记录速览
+                if !recordVM.todayRecords.isEmpty {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("今日已选")
+                            .font(AppFonts.sectionTitle)
+
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(recordVM.todayRecords) { record in
+                                    VStack(spacing: 4) {
+                                        Text(record.emoji)
+                                            .font(.title2)
+                                        Text(record.foodName)
+                                            .font(AppFonts.tiny)
+                                            .lineLimit(1)
+                                    }
+                                    .frame(width: 64)
+                                    .padding(.vertical, 8)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
+                                            .fill(AppColors.warmCream)
+                                    )
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, AppLayout.pagePadding)
+                }
+
+                // 上瘾警告
+                if let warning = recordVM.addictionWarning() {
+                    HStack {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.yellow)
+                        Text(warning)
+                            .font(AppFonts.caption)
+                    }
+                    .padding(12)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                        RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
+                            .fill(.yellow.opacity(0.1))
+                    )
+                    .padding(.horizontal, AppLayout.pagePadding)
+                }
+            }
+            .padding(.vertical, AppLayout.pagePadding)
+        }
+        .background(AppColors.pageBg.ignoresSafeArea())
+    }
+
+    // MARK: - 抽卡结果全屏
+
+    private var cardResultSheet: some View {
+        ZStack {
+            AppColors.pageBg.ignoresSafeArea()
+
+            if let food = cardVM.currentFood {
+                CardResultView(
+                    food: food,
+                    drawCount: cardVM.drawCount,
+                    isFlipped: $cardVM.isCardFlipped,
+                    hapticsEnabled: pref.hapticsEnabled,
+                    onConfirm: {
+                        if let confirmed = cardVM.confirmSelection() {
+                            recordVM.addRecord(food: confirmed)
+                            if pref.hapticsEnabled { HapticsManager.confirmSelection() }
+                        }
+                        showCardResult = false
+                        cardVM.resetRound()
+                    },
+                    onReject: {
+                        if pref.hapticsEnabled { HapticsManager.rejectCard() }
+                        cardVM.rejectAndDrawNext(
+                            blacklist: pref.blacklistSet,
+                            favoriteCuisines: pref.favoriteCuisineEnums,
+                            fortune: fortuneVM.todayFortune,
+                            fortuneEnabled: pref.fortuneEnabled
+                        )
+                    },
+                    onDismiss: {
+                        showCardResult = false
+                        cardVM.resetRound()
+                    }
+                )
+            }
+        }
+    }
+
+    // MARK: - Actions
+
+    private func startDraw() {
+        cardVM.drawCard(
+            blacklist: pref.blacklistSet,
+            favoriteCuisines: pref.favoriteCuisineEnums,
+            fortune: fortuneVM.todayFortune,
+            fortuneEnabled: pref.fortuneEnabled
+        )
+        if cardVM.currentFood != nil {
+            showCardResult = true
         }
     }
 }
 
 #Preview {
     HomeView()
+        .modelContainer(for: [MealRecord.self, UserPreference.self], inMemory: true)
 }

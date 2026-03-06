@@ -5,56 +5,72 @@ import SwiftData
 struct BlacklistView: View {
     @Query private var preferences: [UserPreference]
     @Environment(\.modelContext) private var modelContext
-
     @State private var searchText = ""
     @State private var allFoods: [Food] = []
 
-    private var preference: UserPreference {
+    private var pref: UserPreference {
         preferences.first ?? UserPreference()
     }
 
     var body: some View {
         List {
-            // 已拉黑的食物
-            Section("已排除的食物") {
-                if preference.blacklistedFoods.isEmpty {
-                    Text("还没有排除任何食物")
-                        .foregroundStyle(.secondary)
-                } else {
-                    ForEach(preference.blacklistedFoods, id: \.self) { name in
+            // ── 已拉黑列表 ──
+            if !pref.blacklistedFoods.isEmpty {
+                Section("已排除 (\(pref.blacklistedFoods.count))") {
+                    ForEach(pref.blacklistedFoods, id: \.self) { name in
                         HStack {
+                            if let food = allFoods.first(where: { $0.name == name }) {
+                                Text(food.emoji)
+                            }
                             Text(name)
                             Spacer()
-                            Button("移除") {
-                                preference.blacklistedFoods.removeAll { $0 == name }
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button("移除", role: .destructive) {
+                                withAnimation { pref.removeFromBlacklist(name) }
                             }
-                            .foregroundStyle(.red)
                         }
                     }
                 }
             }
 
-            // 添加到黑名单
-            Section("添加排除项") {
+            // ── 添加区 ──
+            Section("点击添加到黑名单") {
                 ForEach(filteredFoods) { food in
-                    HStack {
-                        Text(food.emoji)
-                        Text(food.name)
-                        Spacer()
-                        if preference.blacklistedFoods.contains(food.name) {
-                            Image(systemName: "checkmark")
-                                .foregroundStyle(.red)
+                    let isBlocked = pref.isBlacklisted(food.name)
+                    Button {
+                        withAnimation(AppAnimations.tagSelect) {
+                            if isBlocked {
+                                pref.removeFromBlacklist(food.name)
+                            } else {
+                                pref.addToBlacklist(food.name)
+                            }
                         }
-                    }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        toggleBlacklist(food.name)
+                    } label: {
+                        HStack(spacing: 10) {
+                            Text(food.emoji)
+                                .font(.title3)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(food.name)
+                                    .font(AppFonts.bodyMedium)
+                                    .foregroundStyle(.primary)
+                                Text(food.cuisine.rawValue)
+                                    .font(AppFonts.tiny)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            if isBlocked {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundStyle(AppColors.reject)
+                                    .transition(.scale)
+                            }
+                        }
                     }
                 }
             }
         }
         .searchable(text: $searchText, prompt: "搜索食物")
-        .navigationTitle("黑名单")
+        .navigationTitle("食物黑名单")
         .onAppear {
             allFoods = FoodDatabase.loadAll()
         }
@@ -62,14 +78,11 @@ struct BlacklistView: View {
 
     private var filteredFoods: [Food] {
         if searchText.isEmpty { return allFoods }
-        return allFoods.filter { $0.name.contains(searchText) }
-    }
-
-    private func toggleBlacklist(_ name: String) {
-        if preference.blacklistedFoods.contains(name) {
-            preference.blacklistedFoods.removeAll { $0 == name }
-        } else {
-            preference.blacklistedFoods.append(name)
+        let query = searchText.lowercased()
+        return allFoods.filter {
+            $0.name.lowercased().contains(query) ||
+            $0.cuisine.rawValue.contains(query) ||
+            $0.tags.contains { $0.contains(query) }
         }
     }
 }

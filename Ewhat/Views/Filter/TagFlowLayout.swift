@@ -11,8 +11,7 @@ struct TagFlowLayout<Item: Identifiable, Content: View>: View {
     }
 
     var body: some View {
-        // 使用 iOS 16+ 的 Layout protocol 实现流式布局
-        FlowLayout(spacing: 8) {
+        FlowLayout(spacing: AppLayout.tagSpacing) {
             ForEach(items) { item in
                 content(item)
             }
@@ -20,63 +19,59 @@ struct TagFlowLayout<Item: Identifiable, Content: View>: View {
     }
 }
 
-/// 流式布局 Layout
+/// 流式布局 — Layout protocol (iOS 16+)
 struct FlowLayout: Layout {
     var spacing: CGFloat = 8
 
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        let result = arrangeSubviews(proposal: proposal, subviews: subviews)
-        return result.size
+        arrange(proposal: proposal, subviews: subviews).size
     }
 
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        let result = arrangeSubviews(proposal: proposal, subviews: subviews)
-
-        for (index, position) in result.positions.enumerated() {
-            subviews[index].place(
-                at: CGPoint(x: bounds.minX + position.x, y: bounds.minY + position.y),
-                proposal: ProposedViewSize(result.sizes[index])
+        let result = arrange(proposal: proposal, subviews: subviews)
+        for (i, pos) in result.positions.enumerated() {
+            subviews[i].place(
+                at: CGPoint(x: bounds.minX + pos.x, y: bounds.minY + pos.y),
+                proposal: ProposedViewSize(result.sizes[i])
             )
         }
     }
 
-    private struct ArrangementResult {
+    private struct Result {
         var positions: [CGPoint]
         var sizes: [CGSize]
         var size: CGSize
     }
 
-    private func arrangeSubviews(proposal: ProposedViewSize, subviews: Subviews) -> ArrangementResult {
-        let maxWidth = proposal.width ?? .infinity
+    private func arrange(proposal: ProposedViewSize, subviews: Subviews) -> Result {
+        let maxW = proposal.width ?? .infinity
         var positions: [CGPoint] = []
         var sizes: [CGSize] = []
         var x: CGFloat = 0
         var y: CGFloat = 0
-        var rowHeight: CGFloat = 0
-        var totalHeight: CGFloat = 0
-        var totalWidth: CGFloat = 0
+        var rowH: CGFloat = 0
+        var totalW: CGFloat = 0
 
-        for subview in subviews {
-            let size = subview.sizeThatFits(.unspecified)
-            sizes.append(size)
+        for sv in subviews {
+            let s = sv.sizeThatFits(.unspecified)
+            sizes.append(s)
 
-            if x + size.width > maxWidth, x > 0 {
+            if x + s.width > maxW, x > 0 {
                 x = 0
-                y += rowHeight + spacing
-                rowHeight = 0
+                y += rowH + spacing
+                rowH = 0
             }
 
             positions.append(CGPoint(x: x, y: y))
-            rowHeight = max(rowHeight, size.height)
-            x += size.width + spacing
-            totalWidth = max(totalWidth, x - spacing)
+            rowH = max(rowH, s.height)
+            x += s.width + spacing
+            totalW = max(totalW, x - spacing)
         }
 
-        totalHeight = y + rowHeight
-        return ArrangementResult(
+        return Result(
             positions: positions,
             sizes: sizes,
-            size: CGSize(width: totalWidth, height: totalHeight)
+            size: CGSize(width: totalW, height: y + rowH)
         )
     }
 }

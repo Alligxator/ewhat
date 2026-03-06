@@ -1,39 +1,126 @@
 import SwiftUI
 
-/// 今日食运卡片
+/// 今日食运卡片 — 呼吸浮动效果
 struct FortuneCardView: View {
     let fortune: DailyFortune
 
+    @State private var floatOffset: CGFloat = 0
+    @State private var glowOpacity: Double = 0.3
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            // 农历日期
+        VStack(alignment: .leading, spacing: 12) {
+            // ── 顶部行：农历日期 + 五行 ──
             HStack {
-                Text(fortune.fullLunarDisplay)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(fortune.weekdayString)
+                        .font(AppFonts.captionBold)
+                        .foregroundStyle(.secondary)
+                    Text(fortune.fullLunarDisplay)
+                        .font(AppFonts.fortuneTitle)
+                        .foregroundStyle(AppColors.warmBrown)
+                }
+
                 Spacer()
-                Text(fortune.element.emoji)
+
+                // 五行徽章
+                VStack(spacing: 2) {
+                    Text(fortune.element.emoji)
+                        .font(.title2)
+                    Text(fortune.element.rawValue + "属性")
+                        .font(AppFonts.tiny)
+                        .foregroundStyle(AppColors.elementColor(fortune.element))
+                }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(
+                    RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
+                        .fill(AppColors.elementColor(fortune.element).opacity(0.1))
+                )
             }
 
-            // 食运签文
-            Text(fortune.fortuneText)
-                .font(.subheadline)
+            // ── 分隔线 ──
+            Rectangle()
+                .fill(
+                    LinearGradient(
+                        colors: [.clear, AppColors.warmAmber.opacity(0.4), .clear],
+                        startPoint: .leading, endPoint: .trailing
+                    )
+                )
+                .frame(height: 1)
+
+            // ── 签文 ──
+            Text(fortune.dailyTheme)
+                .font(AppFonts.sectionTitle)
+                .foregroundStyle(AppColors.warmOrange)
+
+            // 主签文（只取第一句显示）
+            Text(fortune.fortuneText.components(separatedBy: "；").first ?? "")
+                .font(AppFonts.fortune)
+                .foregroundStyle(.primary.opacity(0.8))
                 .lineLimit(2)
 
-            // 推荐标签
-            HStack {
-                ForEach(fortune.luckyAttributes, id: \.self) { attr in
-                    Text(attr)
-                        .font(.caption2)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(.green.opacity(0.1))
-                        .clipShape(Capsule())
+            // ── 宜 / 忌 ──
+            HStack(spacing: 16) {
+                HStack(spacing: 4) {
+                    Text("宜")
+                        .font(AppFonts.captionBold)
+                        .foregroundStyle(.white)
+                        .frame(width: 22, height: 22)
+                        .background(AppColors.confirm, in: RoundedRectangle(cornerRadius: 4))
+                    Text(fortune.luckyAction)
+                        .font(AppFonts.caption)
+                }
+
+                HStack(spacing: 4) {
+                    Text("忌")
+                        .font(AppFonts.captionBold)
+                        .foregroundStyle(.white)
+                        .frame(width: 22, height: 22)
+                        .background(AppColors.reject, in: RoundedRectangle(cornerRadius: 4))
+                    Text(fortune.avoidAction)
+                        .font(AppFonts.caption)
+                }
+            }
+
+            // ── 推荐属性标签 ──
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 6) {
+                    ForEach(fortune.luckyAttributes.prefix(5), id: \.self) { attr in
+                        Text(attr)
+                            .font(AppFonts.tiny)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(
+                                Capsule()
+                                    .fill(AppColors.elementColor(fortune.element).opacity(0.12))
+                            )
+                    }
                 }
             }
         }
-        .padding()
-        .background(.ultraThinMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .padding(AppLayout.cardPadding)
+        .background(
+            ZStack {
+                RoundedRectangle(cornerRadius: AppLayout.cardCorner, style: .continuous)
+                    .fill(.ultraThinMaterial)
+
+                // 呼吸光晕
+                RoundedRectangle(cornerRadius: AppLayout.cardCorner, style: .continuous)
+                    .stroke(
+                        AppColors.elementColor(fortune.element).opacity(glowOpacity),
+                        lineWidth: 1.5
+                    )
+            }
+        )
+        .cardShadow()
+        .offset(y: floatOffset)
+        .onAppear {
+            withAnimation(AppAnimations.fortuneFloat) {
+                floatOffset = -4
+            }
+            withAnimation(AppAnimations.breathe) {
+                glowOpacity = 0.6
+            }
+        }
     }
 }
