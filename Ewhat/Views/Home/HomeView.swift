@@ -11,6 +11,9 @@ struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var preferences: [UserPreference]
 
+    // matchedGeometryEffect namespace
+    @Namespace private var cardNamespace
+
     private var pref: UserPreference { preferences.first ?? UserPreference() }
 
     var body: some View {
@@ -59,6 +62,7 @@ struct HomeView: View {
         }
         .tint(AppColors.warmOrange)
         .onAppear {
+            HapticsManager.prepare()
             recordVM.modelContext = modelContext
             recordVM.refreshAll()
             cardVM.setRecentFoods(recordVM.recentFoodNames())
@@ -85,22 +89,35 @@ struct HomeView: View {
                             .font(AppFonts.caption)
                             .foregroundStyle(.secondary)
                         Spacer()
-                        Button("清除") { cardVM.resetFilters() }
-                            .font(AppFonts.captionBold)
-                            .foregroundStyle(AppColors.warmCoral)
+                        Button("清除") {
+                            withAnimation(AppAnimations.bouncy) { cardVM.resetFilters() }
+                        }
+                        .font(AppFonts.captionBold)
+                        .foregroundStyle(AppColors.warmCoral)
                     }
                     .padding(.horizontal, AppLayout.pagePadding)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
                 }
 
                 // 抽卡区域
                 VStack(spacing: 16) {
-                    // 卡牌背面（待翻转）
-                    CardBackView()
-                        .padding(.horizontal, AppLayout.pagePadding)
-                        .onLongPressGesture(minimumDuration: 0.3) {
-                            if pref.hapticsEnabled { HapticsManager.longPress() }
-                            startDraw()
-                        }
+                    // 卡牌背面 — matchedGeometry source
+                    if !showCardResult {
+                        CardBackView()
+                            .matchedGeometryEffect(id: "cardHero", in: cardNamespace)
+                            .padding(.horizontal, AppLayout.pagePadding)
+                            .onTapGesture {
+                                if pref.hapticsEnabled { HapticsManager.longPress() }
+                                startDraw()
+                            }
+                            .onLongPressGesture(minimumDuration: 0.3) {
+                                if pref.hapticsEnabled { HapticsManager.longPress() }
+                                startDraw()
+                            }
+                    } else {
+                        // 占位
+                        Color.clear.frame(height: 380)
+                    }
 
                     // 按钮行
                     HStack(spacing: 12) {
@@ -127,53 +144,64 @@ struct HomeView: View {
 
                 // 今日记录速览
                 if !recordVM.todayRecords.isEmpty {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("今日已选")
-                            .font(AppFonts.sectionTitle)
-
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
-                                ForEach(recordVM.todayRecords) { record in
-                                    VStack(spacing: 4) {
-                                        Text(record.emoji)
-                                            .font(.title2)
-                                        Text(record.foodName)
-                                            .font(AppFonts.tiny)
-                                            .lineLimit(1)
-                                    }
-                                    .frame(width: 64)
-                                    .padding(.vertical, 8)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
-                                            .fill(AppColors.warmCream)
-                                    )
-                                }
-                            }
-                        }
-                    }
-                    .padding(.horizontal, AppLayout.pagePadding)
+                    todayRecordsSection
                 }
 
                 // 上瘾警告
                 if let warning = recordVM.addictionWarning() {
-                    HStack {
-                        Image(systemName: "exclamationmark.triangle.fill")
-                            .foregroundStyle(.yellow)
-                        Text(warning)
-                            .font(AppFonts.caption)
-                    }
-                    .padding(12)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(
-                        RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
-                            .fill(.yellow.opacity(0.1))
-                    )
-                    .padding(.horizontal, AppLayout.pagePadding)
+                    warningBanner(warning)
                 }
             }
             .padding(.vertical, AppLayout.pagePadding)
         }
         .background(AppColors.pageBg.ignoresSafeArea())
+        .animation(AppAnimations.pageTransition, value: cardVM.hasActiveFilters)
+    }
+
+    // MARK: - 今日记录
+
+    private var todayRecordsSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("今日已选")
+                .font(AppFonts.sectionTitle)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(recordVM.todayRecords) { record in
+                        VStack(spacing: 4) {
+                            Text(record.emoji)
+                                .font(.title2)
+                            Text(record.foodName)
+                                .font(AppFonts.tiny)
+                                .lineLimit(1)
+                        }
+                        .frame(width: 64)
+                        .padding(.vertical, 8)
+                        .background(
+                            RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
+                                .fill(AppColors.warmCream)
+                        )
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, AppLayout.pagePadding)
+    }
+
+    private func warningBanner(_ warning: String) -> some View {
+        HStack {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .foregroundStyle(.yellow)
+            Text(warning)
+                .font(AppFonts.caption)
+        }
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: AppLayout.tinyCorner, style: .continuous)
+                .fill(.yellow.opacity(0.1))
+        )
+        .padding(.horizontal, AppLayout.pagePadding)
     }
 
     // MARK: - 抽卡结果全屏
@@ -191,10 +219,10 @@ struct HomeView: View {
                     onConfirm: {
                         if let confirmed = cardVM.confirmSelection() {
                             recordVM.addRecord(food: confirmed)
-                            if pref.hapticsEnabled { HapticsManager.confirmSelection() }
                         }
                         showCardResult = false
                         cardVM.resetRound()
+                        recordVM.refreshAll()
                     },
                     onReject: {
                         if pref.hapticsEnabled { HapticsManager.rejectCard() }
@@ -210,6 +238,7 @@ struct HomeView: View {
                         cardVM.resetRound()
                     }
                 )
+                .matchedGeometryEffect(id: "cardHero", in: cardNamespace)
             }
         }
     }
@@ -224,7 +253,9 @@ struct HomeView: View {
             fortuneEnabled: pref.fortuneEnabled
         )
         if cardVM.currentFood != nil {
-            showCardResult = true
+            withAnimation(AppAnimations.pageTransition) {
+                showCardResult = true
+            }
         }
     }
 }

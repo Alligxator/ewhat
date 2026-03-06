@@ -1,11 +1,13 @@
 import SwiftUI
 
-/// 今日食运卡片 — 呼吸浮动效果
+/// 今日食运卡片 — 呼吸浮动 + 透明度微变
 struct FortuneCardView: View {
     let fortune: DailyFortune
 
     @State private var floatOffset: CGFloat = 0
-    @State private var glowOpacity: Double = 0.3
+    @State private var glowOpacity: Double = 0.2
+    @State private var contentOpacity: Double = 0.85
+    @State private var shadowRadius: CGFloat = 6
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -48,15 +50,14 @@ struct FortuneCardView: View {
                 )
                 .frame(height: 1)
 
-            // ── 签文 ──
+            // ── 主题 + 签文 ──
             Text(fortune.dailyTheme)
                 .font(AppFonts.sectionTitle)
                 .foregroundStyle(AppColors.warmOrange)
 
-            // 主签文（只取第一句显示）
             Text(fortune.fortuneText.components(separatedBy: "；").first ?? "")
                 .font(AppFonts.fortune)
-                .foregroundStyle(.primary.opacity(0.8))
+                .foregroundStyle(.primary.opacity(contentOpacity))
                 .lineLimit(2)
 
             // ── 宜 / 忌 ──
@@ -104,7 +105,7 @@ struct FortuneCardView: View {
                 RoundedRectangle(cornerRadius: AppLayout.cardCorner, style: .continuous)
                     .fill(.ultraThinMaterial)
 
-                // 呼吸光晕
+                // 呼吸光晕边框
                 RoundedRectangle(cornerRadius: AppLayout.cardCorner, style: .continuous)
                     .stroke(
                         AppColors.elementColor(fortune.element).opacity(glowOpacity),
@@ -112,14 +113,22 @@ struct FortuneCardView: View {
                     )
             }
         )
-        .cardShadow()
+        .shadow(
+            color: AppColors.elementColor(fortune.element).opacity(glowOpacity * 0.5),
+            radius: shadowRadius,
+            y: 2
+        )
         .offset(y: floatOffset)
         .onAppear {
+            // 缓慢上下浮动
             withAnimation(AppAnimations.fortuneFloat) {
-                floatOffset = -4
+                floatOffset = -5
             }
+            // 光晕 + 透明度微变
             withAnimation(AppAnimations.breathe) {
-                glowOpacity = 0.6
+                glowOpacity = 0.55
+                contentOpacity = 1.0
+                shadowRadius = 12
             }
         }
     }
