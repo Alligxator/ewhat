@@ -62,6 +62,7 @@ final class CardViewModel {
     func drawCard(
         blacklist: Set<String> = [],
         favoriteCuisines: [Cuisine] = [],
+        favoriteTags: [String] = [],
         fortune: DailyFortune? = nil,
         fortuneEnabled: Bool = true
     ) {
@@ -103,6 +104,7 @@ final class CardViewModel {
             from: filteredFoods,
             recentFoods: recentFoodNames,
             favoriteCuisines: combinedFavCuisines,
+            favoriteTags: favoriteTags,
             fortuneAttributes: fortuneAttrs,
             fortuneEnabled: fortuneEnabled
         )
@@ -148,6 +150,7 @@ final class CardViewModel {
     func rejectAndDrawNext(
         blacklist: Set<String> = [],
         favoriteCuisines: [Cuisine] = [],
+        favoriteTags: [String] = [],
         fortune: DailyFortune? = nil,
         fortuneEnabled: Bool = true
     ) {
@@ -155,6 +158,7 @@ final class CardViewModel {
         drawCard(
             blacklist: blacklist,
             favoriteCuisines: favoriteCuisines,
+            favoriteTags: favoriteTags,
             fortune: fortune,
             fortuneEnabled: fortuneEnabled
         )

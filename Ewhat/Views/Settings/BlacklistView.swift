@@ -12,6 +12,12 @@ struct BlacklistView: View {
         preferences.first ?? UserPreference()
     }
 
+    private func ensurePreference() {
+        guard preferences.isEmpty else { return }
+        let newPref = UserPreference()
+        modelContext.insert(newPref)
+    }
+
     var body: some View {
         List {
             // ── 已拉黑列表 ──
@@ -72,6 +78,7 @@ struct BlacklistView: View {
         .searchable(text: $searchText, prompt: "搜索食物")
         .navigationTitle("食物黑名单")
         .onAppear {
+            ensurePreference()
             allFoods = FoodDatabase.loadAll()
         }
     }

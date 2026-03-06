@@ -8,10 +8,7 @@ struct SettingsView: View {
     @AppStorage("colorSchemePreference") private var colorSchemePreference = 0 // 0=auto 1=light 2=dark
 
     private var pref: UserPreference {
-        if let existing = preferences.first { return existing }
-        let newPref = UserPreference()
-        modelContext.insert(newPref)
-        return newPref
+        preferences.first ?? UserPreference()
     }
 
     var body: some View {
@@ -139,6 +136,7 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("设置")
+        .onAppear { ensurePreference() }
         .preferredColorScheme(
             colorSchemePreference == 1 ? .light :
             colorSchemePreference == 2 ? .dark : nil
@@ -224,6 +222,12 @@ struct SettingsView: View {
     }
 
     // MARK: - Binding helper
+
+    private func ensurePreference() {
+        guard preferences.isEmpty else { return }
+        let newPref = UserPreference()
+        modelContext.insert(newPref)
+    }
 
     private func binding(_ keyPath: ReferenceWritableKeyPath<UserPreference, Bool>) -> Binding<Bool> {
         Binding(

@@ -16,52 +16,65 @@ struct HomeView: View {
 
     private var pref: UserPreference { preferences.first ?? UserPreference() }
 
+    private func ensurePreference() {
+        guard preferences.isEmpty else { return }
+        let newPref = UserPreference()
+        modelContext.insert(newPref)
+    }
+
     var body: some View {
-        TabView(selection: $selectedTab) {
-            // ── 首页 ──
-            NavigationStack {
-                mainPage
-                    .navigationTitle("")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Text("Ewhat")
-                                .font(AppFonts.pageTitle)
-                                .foregroundStyle(AppColors.warmOrange)
-                        }
-                    }
-                    .sheet(isPresented: $showFilter) {
-                        NavigationStack {
-                            FilterView(cardVM: cardVM) {
-                                showFilter = false
-                                startDraw()
+        ZStack {
+            TabView(selection: $selectedTab) {
+                // ── 首页 ──
+                NavigationStack {
+                    mainPage
+                        .navigationTitle("")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                Text("Ewhat")
+                                    .font(AppFonts.pageTitle)
+                                    .foregroundStyle(AppColors.warmOrange)
                             }
                         }
-                        .presentationDetents([.large])
-                    }
-                    .fullScreenCover(isPresented: $showCardResult) {
-                        cardResultSheet
-                    }
-            }
-            .tabItem { Label("首页", systemImage: "house.fill") }
-            .tag(0)
+                        .sheet(isPresented: $showFilter) {
+                            NavigationStack {
+                                FilterView(cardVM: cardVM, hapticsEnabled: pref.hapticsEnabled) {
+                                    showFilter = false
+                                    startDraw()
+                                }
+                            }
+                            .presentationDetents([.large])
+                        }
+                }
+                .tabItem { Label("首页", systemImage: "house.fill") }
+                .tag(0)
 
-            // ── 记录 ──
-            NavigationStack {
-                RecordView()
-            }
-            .tabItem { Label("记录", systemImage: "calendar") }
-            .tag(1)
+                // ── 记录 ──
+                NavigationStack {
+                    RecordView()
+                }
+                .tabItem { Label("记录", systemImage: "calendar") }
+                .tag(1)
 
-            // ── 设置 ──
-            NavigationStack {
-                SettingsView()
+                // ── 设置 ──
+                NavigationStack {
+                    SettingsView()
+                }
+                .tabItem { Label("设置", systemImage: "gearshape.fill") }
+                .tag(2)
             }
-            .tabItem { Label("设置", systemImage: "gearshape.fill") }
-            .tag(2)
+            .tint(AppColors.warmOrange)
+
+            // ── 抽卡结果覆盖层 ──
+            if showCardResult {
+                cardResultSheet
+                    .transition(.opacity.combined(with: .scale(scale: 0.95)))
+                    .zIndex(1)
+            }
         }
-        .tint(AppColors.warmOrange)
         .onAppear {
+            ensurePreference()
             HapticsManager.prepare()
             recordVM.modelContext = modelContext
             recordVM.refreshAll()
@@ -229,6 +242,7 @@ struct HomeView: View {
                         cardVM.rejectAndDrawNext(
                             blacklist: pref.blacklistSet,
                             favoriteCuisines: pref.favoriteCuisineEnums,
+                            favoriteTags: pref.favoriteTags,
                             fortune: fortuneVM.todayFortune,
                             fortuneEnabled: pref.fortuneEnabled
                         )
@@ -249,6 +263,7 @@ struct HomeView: View {
         cardVM.drawCard(
             blacklist: pref.blacklistSet,
             favoriteCuisines: pref.favoriteCuisineEnums,
+            favoriteTags: pref.favoriteTags,
             fortune: fortuneVM.todayFortune,
             fortuneEnabled: pref.fortuneEnabled
         )

@@ -3,6 +3,7 @@ import SwiftUI
 /// 筛选条件页面 — 标签流多选
 struct FilterView: View {
     @Bindable var cardVM: CardViewModel
+    var hapticsEnabled: Bool = true
     let onStartDraw: () -> Void
     @Environment(\.dismiss) private var dismiss
 
@@ -147,7 +148,7 @@ struct FilterView: View {
                 let selected = isSelected(item)
                 Button {
                     withAnimation(AppAnimations.tagSelect) {
-                        if HapticsManager.self != nil { HapticsManager.selectionChanged() }
+                        if hapticsEnabled { HapticsManager.selectionChanged() }
                         action(item)
                     }
                 } label: {

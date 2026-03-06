@@ -131,10 +131,10 @@ struct CardResultView: View {
 
     // MARK: - Swipe gesture
 
-    private var swipeGesture: some Gesture? {
-        guard isFlipped else { return nil }
-        return DragGesture()
+    private var swipeGesture: some Gesture {
+        DragGesture()
             .onChanged { value in
+                guard isFlipped else { return }
                 dragOffset = value.translation
                 cardRotation = Double(value.translation.width / 20)
                 // 缩放跟随拖拽距离
@@ -142,6 +142,7 @@ struct CardResultView: View {
                 cardScale = max(0.92, 1.0 - distance / 1500)
             }
             .onEnded { value in
+                guard isFlipped else { return }
                 handleSwipeEnd(value.translation, velocity: value.predictedEndTranslation)
             }
     }
