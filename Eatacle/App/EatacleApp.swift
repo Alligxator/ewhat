@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct WhatToEatApp: App {
+struct EatacleApp: App {
     @AppStorage("colorSchemePreference") private var colorSchemePreference = 0
 
     var body: some Scene {

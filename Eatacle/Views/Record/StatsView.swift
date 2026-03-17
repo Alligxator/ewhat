@@ -152,12 +152,11 @@ struct StatsView: View {
 
     private var topFoods: [(name: String, emoji: String, count: Int)] {
         let grouped = Dictionary(grouping: scopedRecords, by: \.foodName)
-        return grouped.map { (key, vals) in
+        let mapped: [(String, String, Int)] = grouped.map { (key, vals) in
             (key, vals.first?.emoji ?? "🍽️", vals.count)
         }
-        .sorted { $0.count > $1.count }
-        .prefix(5)
-        .map { ($0.0, $0.1, $0.2) }
+        let sorted = mapped.sorted { $0.2 > $1.2 }
+        return Array(sorted.prefix(5))
     }
 
     private func overviewBadge(value: String, label: String, color: Color) -> some View {

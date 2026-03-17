@@ -334,7 +334,7 @@ struct ParticleCanvasView: View {
                     guard alpha > 0 else { continue }
 
                     context.opacity = alpha
-                    var transform = CGAffineTransform.identity
+                    let transform = CGAffineTransform.identity
                         .translatedBy(x: x, y: y)
                         .rotated(by: angle.radians)
                         .scaledBy(x: scale, y: scale)

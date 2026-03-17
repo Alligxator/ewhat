@@ -145,12 +145,11 @@ final class RecordViewModel {
     func topFoods(from source: [MealRecord]? = nil, limit: Int = 5) -> [(name: String, emoji: String, count: Int)] {
         let data = source ?? records
         let grouped = Dictionary(grouping: data, by: \.foodName)
-        return grouped.map { (key, values) in
+        let mapped: [(String, String, Int)] = grouped.map { (key, values) in
             (key, values.first?.emoji ?? "🍽️", values.count)
         }
-        .sorted { $0.count > $1.count }
-        .prefix(limit)
-        .map { ($0.0, $0.1, $0.2) }
+        let sorted = mapped.sorted { $0.2 > $1.2 }
+        return Array(sorted.prefix(limit))
     }
 
     var weekTopFoods: [(name: String, emoji: String, count: Int)] {

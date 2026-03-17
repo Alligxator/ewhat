@@ -32,7 +32,7 @@ struct HomeView: View {
                         .navigationBarTitleDisplayMode(.inline)
                         .toolbar {
                             ToolbarItem(placement: .principal) {
-                                Text("Ewhat")
+                                Text("Eatacle")
                                     .font(AppFonts.pageTitle)
                                     .foregroundStyle(AppColors.warmOrange)
                             }
